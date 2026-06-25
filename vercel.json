@@ -1,6 +1,5 @@
 {
-  "buildCommand": null,
-  "outputDirectory": ".",
-  "installCommand": null,
+  "buildCommand": "bun run build",
+  "outputDirectory": "dist",
   "framework": null
 }
