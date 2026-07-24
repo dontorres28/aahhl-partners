@@ -1,365 +1,1005 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AAHHL   Argentina Ice Hockey Federation. Commercial Partnerships. Buenos Aires 2026.">
-  <title>AAHHL · Commercial Partners 2026</title>
+  <meta name="description" content="AAHHL — Asociación Argentina de Hockey sobre Hielo. Commercial partnerships, 2026.">
+  <meta property="og:title" content="AAHHL — Commercial Partnerships 2026">
+  <meta property="og:image" content="images/hero.jpg">
+  <meta name="theme-color" content="#ffffff">
+  <title>AAHHL — Commercial Partnerships 2026</title>
   <link rel="preconnect" href="https://api.fontshare.com">
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,500,700,800&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--black:#080808;--dark:#111111;--card:#161616;--border:#222222;--blue:#75b2dd;--white:#ffffff;--grey:#888888;--light:#cccccc}
-    html{scroll-behavior:smooth}
-    body{font-family:'Satoshi',-apple-system,sans-serif;background:var(--black);color:var(--white);-webkit-font-smoothing:antialiased}
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 48px;background:linear-gradient(to bottom,rgba(8,8,8,.95) 0%,transparent 100%);backdrop-filter:blur(4px)}
-    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-    .nav-logo-text{font-family:'Clash Display',sans-serif;font-size:18px;font-weight:700;letter-spacing:.12em;color:var(--white)}
-    .nav-links{display:flex;align-items:center;gap:32px}
-    .nav-links a{font-size:13px;font-weight:500;color:var(--grey);text-decoration:none;letter-spacing:.04em;transition:color .2s}
-    .nav-links a:hover{color:var(--white)}
-    .nav-cta{padding:10px 22px;background:var(--blue);color:var(--black)!important;border-radius:4px;font-weight:700!important;font-size:13px!important;letter-spacing:.04em;transition:opacity .2s!important}
-    .nav-cta:hover{opacity:.85}
-    .hero{position:relative;height:100vh;min-height:700px;display:flex;align-items:flex-end;overflow:hidden}
-    .hero-bg{position:absolute;inset:0;background-image:url('/images/player.jpg');background-size:cover;background-position:center 30%;filter:brightness(.55)}
-    .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(8,8,8,.92) 0%,rgba(8,8,8,.3) 60%,transparent 100%),linear-gradient(to top,rgba(8,8,8,.9) 0%,transparent 50%)}
-    .hero-content{position:relative;z-index:1;padding:0 48px 80px;max-width:720px}
-    .hero-label{font-size:11px;font-weight:600;letter-spacing:.2em;color:var(--blue);text-transform:uppercase;margin-bottom:20px}
-    .hero-h1{font-family:'Clash Display',sans-serif;font-size:clamp(42px,6vw,80px);font-weight:700;line-height:.97;letter-spacing:-.02em;margin-bottom:24px}
-    .hero-h1 em{font-style:italic;color:var(--blue)}
-    .hero-p{font-size:17px;line-height:1.7;color:var(--light);max-width:520px;margin-bottom:40px;font-weight:300}
-    .hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-    .btn-primary{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:var(--blue);color:var(--black);font-weight:700;font-size:14px;letter-spacing:.04em;border-radius:4px;text-decoration:none;transition:opacity .2s}
-    .btn-primary:hover{opacity:.85}
-    .btn-ghost{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:1px solid var(--border);color:var(--light);font-weight:500;font-size:14px;letter-spacing:.04em;border-radius:4px;text-decoration:none;transition:border-color .2s,color .2s}
-    .btn-ghost:hover{border-color:var(--grey);color:var(--white)}
-    .stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)}
-    .stat{background:var(--dark);padding:36px 48px;display:flex;flex-direction:column;gap:6px}
-    .stat-n{font-family:'Clash Display',sans-serif;font-size:clamp(36px,4vw,52px);font-weight:700;letter-spacing:-.02em;color:var(--white);line-height:1}
-    .stat-n span{color:var(--blue)}
-    .stat-l{font-size:12px;font-weight:500;color:var(--grey);letter-spacing:.08em;text-transform:uppercase}
-    section{padding:120px 48px}
-    .section-label{font-size:11px;font-weight:600;letter-spacing:.2em;color:var(--blue);text-transform:uppercase;margin-bottom:16px}
-    .section-h2{font-family:'Clash Display',sans-serif;font-size:clamp(32px,4vw,52px);font-weight:700;line-height:1.03;letter-spacing:-.02em;margin-bottom:20px}
-    .section-h2 b{color:var(--blue)}
-    .section-h2 i{font-style:italic}
-    .section-p{font-size:16px;line-height:1.75;color:var(--light);font-weight:300;max-width:580px}
-    .story{background:var(--dark)}
-    .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1200px;margin:0 auto}
-    .story-img{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:4/5}
-    .story-img img{width:100%;height:100%;object-fit:cover;display:block}
-    .story-img::after{content:'';position:absolute;inset:0;border:1px solid var(--border);border-radius:4px;pointer-events:none}
-    .story-nums{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:40px;background:var(--border)}
-    .story-num{background:var(--black);padding:24px 20px}
-    .story-num-n{font-family:'Clash Display',sans-serif;font-size:28px;font-weight:700;color:var(--white);letter-spacing:-.02em}
-    .story-num-n span{color:var(--blue)}
-    .story-num-l{font-size:11px;color:var(--grey);letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
-    .why{background:var(--black)}
-    .why-inner{max-width:1200px;margin:0 auto}
-    .why-header{margin-bottom:60px}
-    .why-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border)}
-    .why-card{background:var(--card);padding:32px 24px;display:flex;flex-direction:column;gap:12px}
-    .why-num{font-size:11px;font-weight:700;color:var(--blue);letter-spacing:.15em}
-    .why-h{font-size:15px;font-weight:700;color:var(--white)}
-    .why-b{font-size:13px;line-height:1.6;color:var(--grey);font-weight:300}
-    .why-tag{font-size:11px;font-weight:600;color:var(--blue);margin-top:auto}
-    .why-link{text-decoration:none;color:var(--blue)}
-    .audience{background:var(--dark)}
-    .audience-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1200px;margin:0 auto}
-    .audience-img{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:3/2}
-    .audience-img img{width:100%;height:100%;object-fit:cover}
-    .audience-cards{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:40px;background:var(--border)}
-    .aud-card{background:var(--dark);padding:28px 24px}
-    .aud-n{font-family:'Clash Display',sans-serif;font-size:36px;font-weight:700;letter-spacing:-.02em;color:var(--white)}
-    .aud-n span{color:var(--blue)}
-    .aud-l{font-size:12px;color:var(--grey);letter-spacing:.08em;text-transform:uppercase;margin-top:6px}
-    .photo-break{height:60vh;min-height:400px;position:relative;overflow:hidden}
-    .photo-break img{width:100%;height:100%;object-fit:cover;filter:brightness(.45)}
-    .photo-break-text{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px}
-    .photo-break-quote{font-family:'Clash Display',sans-serif;font-size:clamp(24px,4vw,48px);font-weight:700;line-height:1.08;letter-spacing:-.02em;max-width:800px}
-    .photo-break-quote em{color:var(--blue);font-style:italic}
-    .tiers{background:var(--black)}
-    .tiers-inner{max-width:1200px;margin:0 auto}
-    .tiers-header{margin-bottom:60px}
-    .tiers-grid{display:flex;flex-direction:column;gap:1px;background:var(--border)}
-    .tier-row{background:var(--card);padding:40px 48px;display:grid;grid-template-columns:80px 1fr auto;gap:40px;align-items:start;transition:background .2s}
-    .tier-row:hover{background:#1c1c1c}
-    .tier-num{font-size:13px;font-weight:700;color:var(--blue);letter-spacing:.1em;padding-top:4px}
-    .tier-name{font-family:'Clash Display',sans-serif;font-size:21px;font-weight:600;margin-bottom:8px}
-    .tier-sub{font-size:12px;color:var(--grey);letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
-    .tier-features{display:flex;flex-wrap:wrap;gap:8px}
-    .tier-feat{font-size:12px;padding:5px 12px;border:1px solid var(--border);border-radius:2px;color:var(--light);font-weight:500}
-    .tier-cta-wrap{display:flex;align-items:flex-start;padding-top:4px}
-    .tier-btn{padding:12px 24px;border:1px solid var(--blue);color:var(--blue);font-family:inherit;font-size:13px;font-weight:700;letter-spacing:.06em;border-radius:4px;text-decoration:none;white-space:nowrap;transition:background .2s,color .2s;cursor:pointer;background:transparent}
-    .tier-btn:hover{background:var(--blue);color:var(--black)}
-    .tier-row.founding .tier-btn{background:var(--blue);color:var(--black);border-color:var(--blue)}
-    .tier-row.founding .tier-btn:hover{opacity:.85}
-    .origin{background:var(--dark)}
-    .origin-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1200px;margin:0 auto}
-    .origin-img{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:4/3}
-    .origin-img img{width:100%;height:100%;object-fit:cover}
-    .origin-pts{margin-top:40px;display:flex;flex-direction:column;gap:1px;background:var(--border)}
-    .origin-pt{background:var(--dark);padding:20px 24px;display:flex;gap:16px;align-items:flex-start}
-    .origin-pt-dot{width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:7px}
-    .origin-pt-h{font-size:14px;font-weight:700;margin-bottom:2px}
-    .origin-pt-b{font-size:13px;color:var(--grey);font-weight:300;line-height:1.5}
-    .contact{background:var(--black)}
-    .contact-inner{max-width:640px;margin:0 auto}
-    .contact-form{margin-top:48px;display:flex;flex-direction:column;gap:16px}
+    :root{
+      --ink:#0a0a0a;
+      --ink-2:#141414;
+      --white:#ffffff;
+      --paper:#fafaf9;
+      --paper-2:#f2f1ee;
+      --line:#e6e4dd;
+      --line-strong:#111111;
+      --line-dark:rgba(255,255,255,.12);
+      --text:#111111;
+      --mid:#4d4d4b;
+      --dim:#8a867b;
+      --sky:#5cb1e6;
+      --sky-dark:#1f6ba3;
+      --pad: clamp(20px, 4.5vw, 72px);
+    }
+    html{background:var(--white);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{font-family:'Satoshi',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--white);color:var(--text);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:15.5px;line-height:1.55;text-rendering:optimizeLegibility}
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button{font-family:inherit;cursor:pointer;background:none;border:none;color:inherit}
+    ::selection{background:var(--ink);color:var(--white)}
+
+    /* Language toggle content visibility */
+    :root[data-lang="en"] .lang-es,
+    :root[data-lang="es"] .lang-en{display:none}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);height:66px;color:#fff;transition:background .3s ease,color .3s ease,border-color .3s ease;border-bottom:1px solid transparent}
+    nav.scrolled{background:rgba(255,255,255,.96);color:var(--ink);border-bottom-color:var(--line);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px)}
+    .nav-brand{display:flex;align-items:baseline;gap:12px}
+    .nav-word{font-family:'Supreme',sans-serif;font-weight:800;font-size:18px;letter-spacing:.06em;text-transform:uppercase}
+    .nav-year{font-family:'Supreme',sans-serif;font-size:10.5px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;opacity:.55}
+    .nav-right{display:flex;align-items:center;gap:28px}
+    .nav-links{display:flex;align-items:center;gap:28px}
+    .nav-links a{font-family:'Supreme',sans-serif;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;opacity:.72;transition:opacity .15s}
+    .nav-links a:hover{opacity:1}
+    .lang-toggle{display:flex;align-items:center;gap:0;font-family:'Supreme',sans-serif;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;border:1px solid currentColor;padding:0}
+    .lang-toggle button{padding:7px 11px;opacity:.55;transition:opacity .15s,background .15s,color .15s;line-height:1}
+    .lang-toggle button.active{opacity:1;background:currentColor}
+    .lang-toggle button.active span{color:var(--ink)}
+    nav:not(.scrolled) .lang-toggle button.active span{color:var(--ink)}
+    nav.scrolled .lang-toggle button.active span{color:var(--white)}
+    .lang-toggle button:hover{opacity:1}
+    .nav-cta{opacity:1 !important;padding:11px 20px;font-family:'Supreme',sans-serif;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;background:var(--ink);color:#fff !important;transition:background .2s,color .2s}
+    nav:not(.scrolled) .nav-cta{background:#fff;color:var(--ink) !important}
+    nav:not(.scrolled) .nav-cta:hover{background:var(--sky)}
+    nav.scrolled .nav-cta:hover{background:var(--sky);color:var(--ink) !important}
+
+    /* HERO */
+    .hero{position:relative;height:100vh;height:100svh;min-height:640px;color:#fff;overflow:hidden;isolation:isolate;background:var(--ink)}
+    .hero-bg{position:absolute;inset:0;z-index:-1}
+    .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+    .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.1) 40%,rgba(0,0,0,.8) 100%)}
+    .hero-inner{position:relative;height:100%;padding:110px var(--pad) 0;display:flex;flex-direction:column;justify-content:flex-end}
+    .hero-h1{font-family:'Supreme',sans-serif;font-weight:800;font-size:clamp(40px,5.6vw,88px);line-height:1;letter-spacing:-.028em;color:#fff;text-transform:uppercase;max-width:18ch}
+    .hero-sub{max-width:520px;margin-top:28px;font-size:16px;line-height:1.6;color:rgba(255,255,255,.78);font-weight:400}
+    .hero-actions{margin-top:36px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;font-family:'Supreme',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;transition:background .2s,color .2s,border-color .2s;border:1px solid transparent}
+    .btn-primary{background:#fff;color:var(--ink)}
+    .btn-primary:hover{background:var(--sky)}
+    .btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+    .btn-ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+    .btn-dark{background:var(--ink);color:#fff}
+    .btn-dark:hover{background:var(--sky);color:var(--ink)}
+
+    /* HERO SCOREBOARD */
+    .scoreboard{margin-top:48px;padding:24px 0 28px;border-top:1px solid rgba(255,255,255,.2);display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+    .sb-item{display:flex;flex-direction:column;gap:6px}
+    .sb-k{font-family:'Supreme',sans-serif;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:500}
+    .sb-v{font-family:'Supreme',sans-serif;font-weight:700;font-size:18px;color:#fff;letter-spacing:-.005em;text-transform:uppercase}
+
+    /* CREDENTIAL STRIP — sits at top of white content */
+    .creds{background:var(--white);color:var(--mid);padding:18px var(--pad);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;font-family:'Supreme',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:500}
+    .creds span{white-space:nowrap}
+    .creds .sep{opacity:.35}
+    .creds .champ{color:var(--ink);font-weight:600}
+
+    /* Section shell */
+    .section-pad{padding:clamp(72px,9vw,128px) var(--pad)}
+    .eyebrow{font-family:'Supreme',sans-serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);font-weight:600;display:inline-block;margin-bottom:22px}
+    h2.section-h{font-family:'Supreme',sans-serif;font-weight:800;font-size:clamp(34px,4.4vw,66px);line-height:1;letter-spacing:-.028em;color:var(--ink);text-transform:uppercase;max-width:18ch}
+    .lede{font-family:'Satoshi',sans-serif;font-size:16px;line-height:1.6;color:var(--mid);max-width:560px;margin-top:26px;font-weight:400}
+
+    /* STATS */
+    .stats{background:var(--white);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr)}
+    .stat{padding:56px var(--pad);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+    .stat:last-child{border-right:none}
+    .stat-eyebrow{font-family:'Supreme',sans-serif;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);font-weight:600}
+    .stat-num{font-family:'Supreme',sans-serif;font-weight:800;font-size:clamp(52px,6vw,96px);line-height:.9;letter-spacing:-.05em;color:var(--ink);text-transform:uppercase;display:flex;align-items:baseline;gap:2px}
+    .stat-num .unit{font-size:.42em;color:var(--dim);letter-spacing:0}
+    .stat-note{font-family:'Satoshi',sans-serif;font-size:13px;color:var(--mid);line-height:1.55;max-width:280px}
+
+    /* STORY */
+    .story{display:grid;grid-template-columns:5fr 6fr;background:var(--white)}
+    .story-media{position:relative;overflow:hidden;min-height:640px;background:var(--paper-2)}
+    .story-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .story-body{padding:clamp(56px,7vw,120px) clamp(28px,5vw,88px);display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--line)}
+    .story-copy{margin-top:32px;max-width:540px;font-size:16px;line-height:1.72;color:var(--text)}
+    .story-copy p+p{margin-top:14px}
+
+    /* PROGRAMMES — now light */
+    .programmes{background:var(--paper);color:var(--ink);border-top:1px solid var(--line)}
+    .prog-header{max-width:920px;margin-bottom:64px}
+    .prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+    .prog-card{background:var(--white);display:flex;flex-direction:column}
+    .prog-media{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--paper-2)}
+    .prog-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+    .prog-card:hover .prog-media img{transform:scale(1.03)}
+    .prog-body{padding:26px 28px 32px;display:flex;flex-direction:column;gap:6px}
+    .prog-idx{font-family:'Supreme',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);font-weight:600;margin-bottom:6px}
+    .prog-name{font-family:'Supreme',sans-serif;font-weight:800;font-size:26px;letter-spacing:-.02em;text-transform:uppercase;color:var(--ink);line-height:1}
+    .prog-note{font-family:'Satoshi',sans-serif;font-size:13.5px;color:var(--mid);line-height:1.55;margin-top:4px}
+
+    /* WHY */
+    .why{background:var(--white);color:var(--ink);border-top:1px solid var(--line)}
+    .why-header{max-width:960px;display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:end}
+    .why-list{margin-top:80px;border-top:2px solid var(--ink)}
+    .why-row{display:grid;grid-template-columns:64px 1.2fr 2fr;gap:36px;align-items:baseline;padding:32px 0;border-bottom:1px solid var(--line);transition:background .2s ease}
+    .why-row:hover{background:var(--paper)}
+    .why-row .num{font-family:'Supreme',sans-serif;font-size:12px;color:var(--dim);letter-spacing:.22em;font-weight:600}
+    .why-row .title{font-family:'Supreme',sans-serif;font-weight:800;font-size:clamp(20px,2vw,28px);letter-spacing:-.02em;color:var(--ink);line-height:1.05;text-transform:uppercase}
+    .why-row .desc{font-family:'Satoshi',sans-serif;font-size:14.5px;line-height:1.65;color:var(--mid);max-width:560px}
+    .why-row .desc a{color:var(--ink);font-weight:500;border-bottom:1px solid var(--ink);padding-bottom:1px}
+    .why-row .desc a:hover{color:var(--sky-dark);border-bottom-color:var(--sky-dark)}
+
+    /* BANNER */
+    .banner{position:relative;height:66vh;min-height:480px;overflow:hidden;background:var(--ink)}
+    .banner img{width:100%;height:100%;object-fit:cover;filter:brightness(.6)}
+    .banner-inner{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(32px,6vw,72px);color:#fff}
+    .banner-eyebrow{font-family:'Supreme',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:18px;font-weight:600}
+    .banner-quote{font-family:'Supreme',sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,50px);line-height:1;letter-spacing:-.026em;color:#fff;max-width:1000px;text-transform:uppercase}
+    .banner-attr{margin-top:22px;font-family:'Supreme',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:500}
+
+    /* AUDIENCE */
+    .audience{background:var(--white);display:grid;grid-template-columns:6fr 5fr;border-top:1px solid var(--line)}
+    .audience-body{padding:clamp(56px,7vw,120px) clamp(28px,5vw,88px);border-right:1px solid var(--line)}
+    .audience-media{position:relative;overflow:hidden;min-height:640px;background:var(--paper-2)}
+    .audience-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .aud-table{margin-top:48px;border-top:2px solid var(--ink);max-width:640px}
+    .aud-row{display:grid;grid-template-columns:1fr auto;padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline;gap:24px}
+    .aud-label{font-family:'Satoshi',sans-serif;font-size:14.5px;color:var(--text);font-weight:400}
+    .aud-value{font-family:'Supreme',sans-serif;font-weight:700;font-size:26px;color:var(--ink);letter-spacing:-.02em;text-transform:uppercase;display:flex;align-items:baseline;gap:2px}
+    .aud-value .unit{font-size:.55em;color:var(--dim)}
+    .aud-source{margin-top:28px;font-family:'Supreme',sans-serif;font-size:10.5px;color:var(--dim);letter-spacing:.22em;text-transform:uppercase;font-weight:500}
+
+    /* TIERS */
+    .tiers{background:var(--paper);border-top:1px solid var(--line)}
+    .tiers-header{display:grid;grid-template-columns:1fr auto;align-items:end;gap:40px;margin-bottom:64px}
+    .tiers-note{font-family:'Supreme',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);text-align:right;line-height:2;font-weight:500}
+    .tiers-note strong{color:var(--ink);font-weight:700}
+    .tier-table{border-top:2px solid var(--ink);background:var(--white)}
+    .tier-row{display:grid;grid-template-columns:60px 1.4fr 2fr auto;gap:32px;align-items:center;padding:30px 28px;border-bottom:1px solid var(--line);transition:background .2s ease}
+    .tier-row:hover{background:var(--paper-2)}
+    .tier-row.featured{background:var(--ink);color:#fff;border-bottom:1px solid var(--line-dark)}
+    .tier-row.featured:hover{background:var(--ink-2)}
+    .tier-idx{font-family:'Supreme',sans-serif;font-size:12px;color:var(--dim);letter-spacing:.22em;font-weight:600}
+    .tier-row.featured .tier-idx{color:rgba(255,255,255,.55)}
+    .tier-title{font-family:'Supreme',sans-serif;font-weight:800;font-size:24px;letter-spacing:-.02em;color:var(--ink);line-height:1;text-transform:uppercase;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    .tier-row.featured .tier-title{color:#fff}
+    .tier-badge{font-family:'Supreme',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:5px 10px;background:var(--sky);color:var(--ink);font-weight:700;line-height:1}
+    .tier-sub{margin-top:8px;font-family:'Supreme',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);font-weight:500}
+    .tier-row.featured .tier-sub{color:rgba(255,255,255,.55)}
+    .tier-tags{display:flex;flex-wrap:wrap;gap:6px}
+    .tier-tag{font-family:'Satoshi',sans-serif;font-size:12px;padding:6px 12px;border:1px solid var(--line);color:var(--mid);white-space:nowrap;font-weight:500}
+    .tier-row.featured .tier-tag{border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.85)}
+    .tier-btn{padding:11px 20px;font-family:'Supreme',sans-serif;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;transition:all .2s ease;border:1px solid var(--ink);background:transparent;color:var(--ink)}
+    .tier-btn:hover{background:var(--ink);color:#fff}
+    .tier-row.featured .tier-btn{background:#fff;color:var(--ink);border-color:#fff}
+    .tier-row.featured .tier-btn:hover{background:var(--sky);border-color:var(--sky)}
+
+    /* ORIGIN */
+    .origin{display:grid;grid-template-columns:5fr 6fr;background:var(--white);border-top:1px solid var(--line)}
+    .origin-media{position:relative;overflow:hidden;min-height:640px;order:2;background:var(--paper-2)}
+    .origin-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .origin-body{padding:clamp(56px,7vw,120px) clamp(28px,5vw,88px);display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--line);order:1}
+    .origin-list{margin-top:40px;border-top:2px solid var(--ink)}
+    .origin-item{padding:22px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:44px 1fr;gap:20px;align-items:baseline}
+    .origin-item-n{font-family:'Supreme',sans-serif;font-size:11px;color:var(--dim);letter-spacing:.22em;font-weight:600}
+    .origin-item-h{font-family:'Supreme',sans-serif;font-weight:700;font-size:15px;color:var(--ink);letter-spacing:.02em;text-transform:uppercase;margin-bottom:6px}
+    .origin-item-b{font-family:'Satoshi',sans-serif;font-size:14.5px;color:var(--mid);line-height:1.6;max-width:520px}
+
+    /* LEADERSHIP — now light */
+    .lead{background:var(--paper);color:var(--ink);border-top:1px solid var(--line)}
+    .lead-header{max-width:900px;margin-bottom:64px}
+    .leaders{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .leader{background:var(--white);padding:40px 30px;display:flex;flex-direction:column;gap:12px;transition:background .2s ease}
+    .leader:hover{background:var(--paper-2)}
+    .leader-role{font-family:'Supreme',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);font-weight:600}
+    .leader-name{font-family:'Supreme',sans-serif;font-weight:800;font-size:28px;letter-spacing:-.02em;color:var(--ink);line-height:1;text-transform:uppercase}
+
+    /* CONTACT */
+    .contact{background:var(--white);border-top:1px solid var(--line)}
+    .contact-grid{display:grid;grid-template-columns:5fr 6fr;gap:clamp(48px,7vw,120px);align-items:start}
+    .contact-facts{margin-top:40px;padding-top:24px;border-top:2px solid var(--ink)}
+    .contact-fact{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:baseline;font-family:'Satoshi',sans-serif;font-size:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+    .contact-fact:last-child{border-bottom:none}
+    .contact-fact dt{font-family:'Supreme',sans-serif;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);font-weight:600}
+    .contact-fact dd{color:var(--text);font-weight:500}
+    .contact-fact dd a{border-bottom:1px solid var(--line);padding-bottom:1px;transition:border-color .15s,color .15s}
+    .contact-fact dd a:hover{border-bottom-color:var(--ink);color:var(--ink)}
+    .contact-form{background:var(--paper);padding:clamp(28px,4vw,42px);border:1px solid var(--line);display:flex;flex-direction:column;gap:18px}
     .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .form-group{display:flex;flex-direction:column;gap:8px}
-    .form-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
-    .form-input,.form-textarea,.form-select{background:var(--card);border:1px solid var(--border);color:var(--white);font-family:inherit;font-size:15px;padding:14px 16px;border-radius:4px;outline:none;transition:border-color .2s}
-    .form-input:focus,.form-textarea:focus,.form-select:focus{border-color:var(--blue)}
-    .form-textarea{min-height:120px;resize:vertical}
-    .form-select{appearance:none;cursor:pointer}
-    .form-submit{padding:16px 32px;background:var(--blue);color:var(--black);font-family:inherit;font-size:14px;font-weight:700;letter-spacing:.06em;border:none;border-radius:4px;cursor:pointer;transition:opacity .2s;align-self:flex-start}
-    .form-submit:hover{opacity:.85}
-    .form-note{font-size:13px;color:var(--grey);line-height:1.6}
-    #form-success{display:none;padding:24px;background:rgba(117,178,221,.1);border:1px solid var(--blue);border-radius:4px;color:var(--blue);font-weight:600}
-    footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;align-items:center;justify-content:space-between}
-    .foot-left{font-size:13px;color:var(--grey)}
-    .foot-links{display:flex;gap:24px}
-    .foot-links a{font-size:12px;color:var(--grey);text-decoration:none;transition:color .2s}
-    .foot-links a:hover{color:var(--white)}
-    @media(max-width:900px){
-      nav{padding:16px 24px}
+    .form-label{font-family:'Supreme',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+    .form-input,.form-textarea,.form-select{background:var(--white);border:1px solid var(--line);color:var(--text);font-family:'Satoshi',sans-serif;font-size:15px;padding:13px 15px;outline:none;transition:border-color .15s;width:100%}
+    .form-input:focus,.form-textarea:focus,.form-select:focus{border-color:var(--ink)}
+    .form-textarea{min-height:130px;resize:vertical}
+    .form-select{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none' stroke='%234d4d4b' stroke-width='1.5'><path d='M1 1l5 5 5-5'/></svg>");background-repeat:no-repeat;background-position:right 16px center;background-size:12px 8px;padding-right:44px;cursor:pointer}
+    .form-submit{margin-top:8px;padding:15px 28px;background:var(--ink);color:#fff;font-family:'Supreme',sans-serif;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--ink);align-self:flex-start;transition:background .2s,color .2s}
+    .form-submit:hover{background:var(--sky);border-color:var(--sky);color:var(--ink)}
+    .form-submit:disabled{opacity:.55;cursor:not-allowed}
+    .form-note{font-family:'Satoshi',sans-serif;font-size:12px;color:var(--dim);line-height:1.6;margin-top:4px}
+    #form-success{display:none;padding:30px;background:var(--paper);border:1px solid var(--line);color:var(--text)}
+    #form-success h3{font-family:'Supreme',sans-serif;font-weight:800;font-size:22px;letter-spacing:-.02em;text-transform:uppercase;margin-bottom:10px}
+    #form-success p{font-family:'Satoshi',sans-serif;font-size:14.5px;color:var(--mid);line-height:1.6}
+
+    /* FOOTER — stays dark for contrast */
+    footer{background:var(--ink);color:#fff;padding:60px var(--pad) 30px}
+    .foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:44px;border-bottom:1px solid var(--line-dark)}
+    .foot-brand{display:flex;flex-direction:column;gap:16px;max-width:380px}
+    .foot-word{font-family:'Supreme',sans-serif;font-weight:800;font-size:26px;letter-spacing:.04em;text-transform:uppercase}
+    .foot-tag{font-family:'Satoshi',sans-serif;font-size:13.5px;color:rgba(255,255,255,.55);line-height:1.65}
+    .foot-col-h{font-family:'Supreme',sans-serif;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px;font-weight:600}
+    .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .foot-col a{font-family:'Satoshi',sans-serif;color:rgba(255,255,255,.82);font-size:13.5px;transition:color .15s}
+    .foot-col a:hover{color:var(--sky)}
+    .foot-col .muted{color:rgba(255,255,255,.4)}
+    .foot-bottom{padding-top:26px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-family:'Supreme',sans-serif;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:500}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .story,.audience,.origin{grid-template-columns:1fr}
+      .story-media,.audience-media,.origin-media{min-height:60vw;order:1}
+      .story-body,.audience-body,.origin-body{border-left:none;border-right:none;border-top:1px solid var(--line);order:2}
+      .origin-body{order:2}
+      .why-header{grid-template-columns:1fr;gap:20px}
+      .why-row{grid-template-columns:44px 1fr;gap:14px 20px;row-gap:8px}
+      .why-row .desc{grid-column:2/-1}
+      .contact-grid{grid-template-columns:1fr}
+      .leaders{grid-template-columns:1fr;gap:1px}
+      .foot-top{grid-template-columns:1fr 1fr;gap:32px}
+      .tiers-header{grid-template-columns:1fr}
+      .tiers-note{text-align:left}
+      .prog-grid{grid-template-columns:1fr;gap:1px}
+      .prog-media{aspect-ratio:16/10}
+      .scoreboard{grid-template-columns:1fr 1fr;gap:20px 32px}
+    }
+    @media(max-width:1100px){
       .nav-links{display:none}
-      section{padding:80px 24px}
-      .hero-content{padding:0 24px 60px}
-      .stats-bar{grid-template-columns:repeat(2,1fr)}
-      .story-grid,.audience-grid,.origin-grid{grid-template-columns:1fr;gap:40px}
-      .why-grid{grid-template-columns:1fr 1fr}
-      .tier-row{grid-template-columns:1fr;gap:20px;padding:28px 24px}
-      footer{flex-direction:column;gap:16px;padding:32px 24px}
+    }
+    @media(max-width:720px){
+      nav{height:58px}
+      .nav-year{display:none}
+      .nav-right{gap:12px}
+      .hero-inner{padding-top:88px}
+      .hero-h1{font-size:clamp(40px,10.5vw,68px)}
+      .hero-sub{font-size:15px}
+      .scoreboard{grid-template-columns:1fr 1fr;gap:20px}
+      .sb-v{font-size:16px}
+      .stats{grid-template-columns:1fr 1fr}
+      .stat{padding:32px 22px;border-bottom:1px solid var(--line)}
+      .stat:nth-child(2){border-right:none}
+      .stat:nth-child(3),.stat:nth-child(4){border-bottom:none}
+      .tier-row{grid-template-columns:1fr;gap:14px;padding:26px 22px}
+      .banner{height:56vh;min-height:380px}
+      .foot-top{grid-template-columns:1fr}
+      .foot-bottom{flex-direction:column;align-items:flex-start}
+      .form-row{grid-template-columns:1fr}
+      .contact-fact{grid-template-columns:1fr;gap:4px}
+      .creds{gap:12px 20px;font-size:10.5px;justify-content:flex-start}
+      .creds .sep{display:none}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important}
     }
   </style>
 </head>
 <body>
 
-<nav>
-  <a href="#" class="nav-logo"><span class="nav-logo-text">AAHHL</span></a>
-  <div class="nav-links">
-    <a href="#story">The Story</a>
-    <a href="#audience">Audience</a>
-    <a href="#tiers">Tiers</a>
-    <a href="#contact" class="nav-cta">Partner With Us</a>
+<nav id="nav">
+  <a href="#top" class="nav-brand" aria-label="AAHHL home">
+    <span class="nav-word">AAHHL</span>
+    <span class="nav-year">Est. 1997</span>
+  </a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="#story" data-i18n="nav.story">Story</a>
+      <a href="#programmes" data-i18n="nav.programmes">Programmes</a>
+      <a href="#why" data-i18n="nav.why">Why 2026</a>
+      <a href="#tiers" data-i18n="nav.tiers">Partnership</a>
+    </div>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button class="lang-btn active" data-lang="en" aria-label="English"><span>EN</span></button>
+      <button class="lang-btn" data-lang="es" aria-label="Español"><span>ES</span></button>
+    </div>
+    <a href="#contact" class="nav-cta" data-i18n="nav.cta">Partner With Us</a>
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero" id="top">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <p class="hero-label">Commercial Partnership · Buenos Aires 2026</p>
-    <h1 class="hero-h1">Where the world ends,<br><em>hockey begins.</em></h1>
-    <p class="hero-p">Argentina's national ice hockey federation. One of the most unlikely stories in sport. For the first time, we're opening it up to partners.</p>
+  <div class="hero-bg">
+    <img src="images/hero.jpg" alt="Argentina captain raising the Amerigol Cup">
+  </div>
+  <div class="hero-inner">
+    <h1 class="hero-h1" data-i18n="hero.title">Where the world ends, hockey begins.</h1>
+    <p class="hero-sub" data-i18n="hero.sub">Argentina&rsquo;s national ice hockey federation. For the first time, opening the doors to founding commercial partners.</p>
     <div class="hero-actions">
-      <a href="#tiers" class="btn-primary">See Partnership Tiers &rarr;</a>
-      <a href="#story" class="btn-ghost">The Story</a>
+      <a href="#tiers" class="btn btn-primary" data-i18n="hero.cta1">Partnership Tiers &rarr;</a>
+      <a href="#story" class="btn btn-ghost" data-i18n="hero.cta2">Read the Story</a>
+    </div>
+    <div class="scoreboard">
+      <div class="sb-item">
+        <span class="sb-k" data-i18n="sb.federation">Federation</span>
+        <span class="sb-v">AAHHL / 1997</span>
+      </div>
+      <div class="sb-item">
+        <span class="sb-k" data-i18n="sb.silverware">Latest silverware</span>
+        <span class="sb-v" data-i18n="sb.silverwareV">Amerigol Champions</span>
+      </div>
+      <div class="sb-item">
+        <span class="sb-k" data-i18n="sb.programmes">National programmes</span>
+        <span class="sb-v" data-i18n="sb.programmesV">Senior / Women / U20</span>
+      </div>
+      <div class="sb-item">
+        <span class="sb-k" data-i18n="sb.slots">Founding slots</span>
+        <span class="sb-v" data-i18n="sb.slotsV">2 of 2 available</span>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="stats-bar">
-  <div class="stat"><div class="stat-n"><span>59</span>K</div><div class="stat-l">Social Followers</div></div>
-  <div class="stat"><div class="stat-n"><span>3.6</span>M</div><div class="stat-l">Organic Views &middot; No Budget</div></div>
-  <div class="stat"><div class="stat-n"><span>53</span>%</div><div class="stat-l">Female Audience</div></div>
-  <div class="stat"><div class="stat-n"><span>0</span></div><div class="stat-l">Tier 1 Slots Taken</div></div>
+<!-- CREDENTIAL STRIP -->
+<div class="creds">
+  <span class="champ" data-i18n="creds.champ">Amerigol Cup Champions</span><span class="sep">/</span>
+  <span data-i18n="creds.iihf">IIHF Member Federation</span><span class="sep">/</span>
+  <span data-i18n="creds.nhl">NHL Feature</span><span class="sep">/</span>
+  <span data-i18n="creds.progs">3 National Programmes</span><span class="sep">/</span>
+  <span>Buenos Aires</span>
 </div>
 
+<!-- STATS -->
+<section class="stats">
+  <div class="stat">
+    <span class="stat-eyebrow" data-i18n="stat.1.k">01 / Reach</span>
+    <div class="stat-num">59<span class="unit">K</span></div>
+    <div class="stat-note" data-i18n="stat.1.note">Social followers across Instagram &amp; TikTok, growing weekly.</div>
+  </div>
+  <div class="stat">
+    <span class="stat-eyebrow" data-i18n="stat.2.k">02 / Attention</span>
+    <div class="stat-num">3.6<span class="unit">M</span></div>
+    <div class="stat-note" data-i18n="stat.2.note">Organic views. Zero paid media. No production budget.</div>
+  </div>
+  <div class="stat">
+    <span class="stat-eyebrow" data-i18n="stat.3.k">03 / Audience</span>
+    <div class="stat-num">53<span class="unit">%</span></div>
+    <div class="stat-note" data-i18n="stat.3.note">Female audience &mdash; a mix most sports properties cannot claim.</div>
+  </div>
+  <div class="stat">
+    <span class="stat-eyebrow" data-i18n="stat.4.k">04 / Federation</span>
+    <div class="stat-num">1997</div>
+    <div class="stat-note" data-i18n="stat.4.note">IIHF member federation. Full sanctioning.</div>
+  </div>
+</section>
+
+<!-- STORY -->
 <section class="story" id="story">
-  <div class="story-grid">
-    <div class="story-img">
-      <img src="/images/hero.jpg" alt="Argentina national team player" loading="lazy">
+  <div class="story-media">
+    <img src="images/puck.jpg" alt="Argentina national team jersey detail" loading="lazy">
+  </div>
+  <div class="story-body">
+    <span class="eyebrow" data-i18n="story.eyebrow">The Federation</span>
+    <h2 class="section-h" data-i18n="story.h">The most football-mad country on earth is now playing the coldest sport.</h2>
+    <div class="story-copy">
+      <p data-i18n="story.p1">From Maradona to Messi, Argentina has authored some of the greatest stories in world sport. That same defiance is going into ice hockey now.</p>
+      <p data-i18n="story.p2">The AAHHL isn&rsquo;t trying to catch Canada, or Finland, or the KHL. We are trying to be Argentina, with hockey &mdash; a fundamentally different, and more marketable, proposition.</p>
     </div>
-    <div>
-      <p class="section-label">01 &middot; The Story</p>
-      <h2 class="section-h2">The most football-mad country on earth.<br><i>Now playing the coldest sport there is.</i></h2>
-      <p class="section-p">From Maradona to Messi, this country has given the world some of its biggest sporting stories. That same defiance   the passion, the identity, the refusal to be told what kind of sport belongs here   is going into ice hockey now. We're not trying to catch up to Canada. We're trying to be Argentina, with hockey.</p>
-      <div class="story-nums">
-        <div class="story-num"><div class="story-num-n">46<span>M</span></div><div class="story-num-l">Population</div></div>
-        <div class="story-num"><div class="story-num-n"><span>#1</span></div><div class="story-num-l">Sporting Nation</div></div>
-        <div class="story-num"><div class="story-num-n"><span>1997</span></div><div class="story-num-l">IIHF Member</div></div>
-        <div class="story-num"><div class="story-num-n">3</div><div class="story-num-l">National Teams</div></div>
+  </div>
+</section>
+
+<!-- PROGRAMMES -->
+<section class="programmes section-pad" id="programmes">
+  <div class="prog-header">
+    <span class="eyebrow" data-i18n="prog.eyebrow">Three Programmes</span>
+    <h2 class="section-h" data-i18n="prog.h">One flag. Three teams.</h2>
+  </div>
+  <div class="prog-grid">
+    <div class="prog-card">
+      <div class="prog-media"><img src="images/hero.jpg" alt="Argentina senior men's national team" loading="lazy"></div>
+      <div class="prog-body">
+        <div class="prog-idx" data-i18n="prog.1.k">01 / National Team</div>
+        <div class="prog-name" data-i18n="prog.1.n">Senior Men</div>
+        <div class="prog-note" data-i18n="prog.1.d">Amerigol Cup Champions.</div>
+      </div>
+    </div>
+    <div class="prog-card">
+      <div class="prog-media"><img src="images/story.jpg" alt="Argentina women's national ice hockey team" loading="lazy"></div>
+      <div class="prog-body">
+        <div class="prog-idx" data-i18n="prog.2.k">02 / National Team</div>
+        <div class="prog-name" data-i18n="prog.2.n">Women</div>
+        <div class="prog-note" data-i18n="prog.2.d">Women&rsquo;s 3x3 Series, Buenos Aires.</div>
+      </div>
+    </div>
+    <div class="prog-card">
+      <div class="prog-media"><img src="images/origin.jpg" alt="Argentina youth national team huddle" loading="lazy"></div>
+      <div class="prog-body">
+        <div class="prog-idx" data-i18n="prog.3.k">03 / Development</div>
+        <div class="prog-name" data-i18n="prog.3.n">U20 &amp; Youth</div>
+        <div class="prog-note" data-i18n="prog.3.d">The pipeline into the senior and women&rsquo;s programmes.</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="why" id="why">
-  <div class="why-inner">
-    <div class="why-header">
-      <p class="section-label">02 &middot; Why Now</p>
-      <h2 class="section-h2">Five things lining up.<br><b>One window   and it won&rsquo;t stay open.</b></h2>
+<!-- BANNER 1 -->
+<div class="banner">
+  <img src="images/fans.jpg" alt="Argentine fans packed into the arena" loading="lazy">
+  <div class="banner-inner">
+    <p class="banner-eyebrow" data-i18n="ban1.k">The audience</p>
+    <p class="banner-quote" data-i18n="ban1.q">Argentine fans travel. They fill the building.</p>
+    <p class="banner-attr" data-i18n="ban1.a">Amerigol Cup &middot; Coral Springs, Florida</p>
+  </div>
+</div>
+
+<!-- WHY -->
+<section class="why section-pad" id="why">
+  <div class="why-header">
+    <div>
+      <span class="eyebrow" data-i18n="why.eyebrow">Why 2026</span>
+      <h2 class="section-h" data-i18n="why.h">Five signals lining up. One window.</h2>
     </div>
-    <div class="why-grid">
-      <div class="why-card"><div class="why-num">01</div><div class="why-h">IIHF Recognition</div><div class="why-b">Full international federation since 1997. The competitive structure is built and growing.</div><div class="why-tag">Since 1997</div></div>
-      <div class="why-card"><div class="why-num">02</div><div class="why-h">Filmed by the NHL</div><div class="why-b">The NHL put our story on camera. That level of credibility isn&rsquo;t something you manufacture.</div><a href="https://youtu.be/zgSlm26__-c" target="_blank" rel="noopener" class="why-tag why-link">Watch the feature &rarr;</a></div>
-      <div class="why-card"><div class="why-num">03</div><div class="why-h">Roster Expanding</div><div class="why-b">Dual nationals and homegrown players keep signing on. The pipeline is real.</div><div class="why-tag">Growing Fast</div></div>
-      <div class="why-card"><div class="why-num">04</div><div class="why-h">59K / 3.6M</div><div class="why-b">Followers and organic views   no budget, no crew. It still moves on its own.</div><div class="why-tag">Organic Growth</div></div>
-      <div class="why-card"><div class="why-num">05</div><div class="why-h">Exclusive Window</div><div class="why-b">The category rights available now will not exist in two years. Getting in early compounds.</div><div class="why-tag">2026 Only</div></div>
+    <p class="lede" data-i18n="why.lede">Category rights available in the 2026 window will not exist at this scale in two seasons&rsquo; time.</p>
+  </div>
+  <div class="why-list">
+    <div class="why-row">
+      <div class="num">01</div>
+      <div class="title" data-i18n="why.1.t">IIHF recognition</div>
+      <div class="desc" data-i18n="why.1.d">Full member of the International Ice Hockey Federation since 1997.</div>
+    </div>
+    <div class="why-row">
+      <div class="num">02</div>
+      <div class="title" data-i18n="why.2.t">Amerigol Champions</div>
+      <div class="desc" data-i18n="why.2.d">Argentina lifted the Amerigol Cup with the senior programme.</div>
+    </div>
+    <div class="why-row">
+      <div class="num">03</div>
+      <div class="title" data-i18n="why.3.t">Filmed by the NHL</div>
+      <div class="desc" data-i18n="why.3.d">A level of institutional credibility a young federation doesn&rsquo;t manufacture. <a href="https://youtu.be/zgSlm26__-c" target="_blank" rel="noopener">Watch the feature</a>.</div>
+    </div>
+    <div class="why-row">
+      <div class="num">04</div>
+      <div class="title" data-i18n="why.4.t">3.6M views, zero spend</div>
+      <div class="desc" data-i18n="why.4.d">3.6M organic views. 59K followers. No media budget, no agency, no production crew.</div>
+    </div>
+    <div class="why-row">
+      <div class="num">05</div>
+      <div class="title" data-i18n="why.5.t">A window that closes</div>
+      <div class="desc" data-i18n="why.5.d">Two founding positions. Category exclusive. Three-year runway.</div>
     </div>
   </div>
 </section>
 
-<div class="photo-break">
-  <img src="/images/fans.jpg" alt="Argentine fans celebrating" loading="lazy">
-  <div class="photo-break-text">
-    <p class="section-label" style="margin-bottom:20px">The Audience</p>
-    <p class="photo-break-quote">18&ndash;34. Majority female. <em>82% Argentina-based.</em><br>Already there, already watching.</p>
+<!-- BANNER 2 -->
+<div class="banner">
+  <img src="images/content.jpg" alt="Argentina team celebrating the Amerigol Cup" loading="lazy">
+  <div class="banner-inner">
+    <p class="banner-eyebrow" data-i18n="ban2.k">Amerigol Cup</p>
+    <p class="banner-quote" data-i18n="ban2.q">Argentina, holding the cup.</p>
+    <p class="banner-attr" data-i18n="ban2.a">Coral Springs, Florida</p>
   </div>
 </div>
 
+<!-- AUDIENCE -->
 <section class="audience" id="audience">
-  <div class="audience-grid">
+  <div class="audience-body">
+    <span class="eyebrow" data-i18n="aud.eyebrow">The Audience</span>
+    <h2 class="section-h" data-i18n="aud.h">A demographic profile most sports cannot offer.</h2>
+    <p class="lede" data-i18n="aud.lede">Young. Digitally native. Majority female. Overwhelmingly Argentine.</p>
+    <div class="aud-table">
+      <div class="aud-row"><div class="aud-label" data-i18n="aud.1">Female audience</div><div class="aud-value">53.9<span class="unit">%</span></div></div>
+      <div class="aud-row"><div class="aud-label" data-i18n="aud.2">Argentina-based</div><div class="aud-value">82.3<span class="unit">%</span></div></div>
+      <div class="aud-row"><div class="aud-label" data-i18n="aud.3">Core age group</div><div class="aud-value">18&ndash;34</div></div>
+      <div class="aud-row"><div class="aud-label" data-i18n="aud.4">Organic views, trailing 12 months</div><div class="aud-value">3.6<span class="unit">M</span></div></div>
+    </div>
+    <p class="aud-source" data-i18n="aud.source">Source &middot; AAHHL Meta &amp; TikTok analytics</p>
+  </div>
+  <div class="audience-media">
+    <img src="images/player.jpg" alt="Argentina player in action" loading="lazy">
+  </div>
+</section>
+
+<!-- TIERS -->
+<section class="tiers section-pad" id="tiers">
+  <div class="tiers-header">
     <div>
-      <p class="section-label">03 &middot; Audience</p>
-      <h2 class="section-h2">A demographic profile<br><b>most sports can&rsquo;t offer.</b></h2>
-      <p class="section-p">Young, digitally native, majority female   and 82% of them are in Argentina. This is not a passive fan base. They are early adopters who followed the sport before it was viable.</p>
-      <div class="audience-cards">
-        <div class="aud-card"><div class="aud-n"><span>53</span>.9%</div><div class="aud-l">Female Audience</div></div>
-        <div class="aud-card"><div class="aud-n"><span>82</span>.3%</div><div class="aud-l">Argentina-Based</div></div>
-        <div class="aud-card"><div class="aud-n"><span>18&ndash;34</span></div><div class="aud-l">Core Age Group</div></div>
-        <div class="aud-card"><div class="aud-n"><span>3.6</span>M</div><div class="aud-l">Organic Views</div></div>
+      <span class="eyebrow" data-i18n="tiers.eyebrow">Partnership</span>
+      <h2 class="section-h" data-i18n="tiers.h">Five tiers. One chance to be first.</h2>
+    </div>
+    <p class="tiers-note" data-i18n="tiers.note">Only <strong>two Founding Partner</strong> positions.<br>Three-year minimum &middot; Category exclusive.</p>
+  </div>
+  <div class="tier-table">
+
+    <div class="tier-row featured">
+      <div class="tier-idx">01</div>
+      <div>
+        <div class="tier-title"><span data-i18n="tier.1.n">Founding Partner</span> <span class="tier-badge" data-i18n="tier.1.b">2 slots</span></div>
+        <div class="tier-sub" data-i18n="tier.1.sub">3-year minimum &middot; Full category exclusivity</div>
       </div>
+      <div class="tier-tags">
+        <span class="tier-tag" data-i18n="tag.exclusivity">Category exclusivity</span>
+        <span class="tier-tag" data-i18n="tag.branding">Helmet &amp; chest</span>
+        <span class="tier-tag" data-i18n="tag.content">Co-produced content</span>
+        <span class="tier-tag" data-i18n="tag.access">Leadership access</span>
+        <span class="tier-tag" data-i18n="tag.origin">Origin story rights</span>
+      </div>
+      <button class="tier-btn" data-tier-key="tier.1.n" data-i18n="tier.cta">Begin Conversation</button>
     </div>
-    <div class="audience-img">
-      <img src="/images/story.jpg" alt="Argentina player in action" loading="lazy">
+
+    <div class="tier-row">
+      <div class="tier-idx">02</div>
+      <div>
+        <div class="tier-title" data-i18n="tier.2.n">Official Partner</div>
+        <div class="tier-sub" data-i18n="tier.2.sub">4&ndash;6 positions &middot; 2-year minimum</div>
+      </div>
+      <div class="tier-tags">
+        <span class="tier-tag" data-i18n="tag.exclusivity">Category exclusivity</span>
+        <span class="tier-tag" data-i18n="tag.digital">Digital integration</span>
+        <span class="tier-tag" data-i18n="tag.training">Training-wear presence</span>
+        <span class="tier-tag" data-i18n="tag.contentPartner">Content partnership</span>
+      </div>
+      <button class="tier-btn" data-tier-key="tier.2.n" data-i18n="tier.cta">Begin Conversation</button>
     </div>
+
+    <div class="tier-row">
+      <div class="tier-idx">03</div>
+      <div>
+        <div class="tier-title" data-i18n="tier.3.n">Federation Supplier</div>
+        <div class="tier-sub" data-i18n="tier.3.sub">Open &middot; 1-year</div>
+      </div>
+      <div class="tier-tags">
+        <span class="tier-tag" data-i18n="tag.designation">Official designation</span>
+        <span class="tier-tag" data-i18n="tag.product">Product integration</span>
+        <span class="tier-tag" data-i18n="tag.visibility">Federation visibility</span>
+      </div>
+      <button class="tier-btn" data-tier-key="tier.3.n" data-i18n="tier.cta">Begin Conversation</button>
+    </div>
+
+    <div class="tier-row">
+      <div class="tier-idx">04</div>
+      <div>
+        <div class="tier-title" data-i18n="tier.4.n">Community Partner</div>
+        <div class="tier-sub" data-i18n="tier.4.sub">Open &middot; Flexible terms</div>
+      </div>
+      <div class="tier-tags">
+        <span class="tier-tag" data-i18n="tag.local">Local event visibility</span>
+        <span class="tier-tag" data-i18n="tag.regional">Regional rights</span>
+        <span class="tier-tag" data-i18n="tag.community">Community activation</span>
+      </div>
+      <button class="tier-btn" data-tier-key="tier.4.n" data-i18n="tier.cta">Begin Conversation</button>
+    </div>
+
+    <div class="tier-row">
+      <div class="tier-idx">05</div>
+      <div>
+        <div class="tier-title" data-i18n="tier.5.n">Player Patron</div>
+        <div class="tier-sub" data-i18n="tier.5.sub">Per athlete &middot; 1-year</div>
+      </div>
+      <div class="tier-tags">
+        <span class="tier-tag" data-i18n="tag.player">Player-exclusive branding</span>
+        <span class="tier-tag" data-i18n="tag.meet">Meet &amp; greet rights</span>
+        <span class="tier-tag" data-i18n="tag.individual">Individual content</span>
+      </div>
+      <button class="tier-btn" data-tier-key="tier.5.n" data-i18n="tier.cta">Begin Conversation</button>
+    </div>
+
   </div>
 </section>
 
-<div class="photo-break">
-  <img src="/images/content.jpg" alt="Argentina in international competition" loading="lazy">
-  <div class="photo-break-text">
-    <p class="photo-break-quote">Playing against Brazil. Colombia. <em>Carrying the flag.</em></p>
-  </div>
-</div>
-
-<section class="tiers" id="tiers">
-  <div class="tiers-inner">
-    <div class="tiers-header">
-      <p class="section-label">04 &middot; Partnerships</p>
-      <h2 class="section-h2">Five tiers.<br><b>One chance to be first.</b></h2>
-    </div>
-    <div class="tiers-grid">
-      <div class="tier-row founding">
-        <div class="tier-num">01</div>
-        <div class="tier-body">
-          <div class="tier-name">Founding Partner</div>
-          <div class="tier-sub">2 positions maximum &middot; 3-Year minimum</div>
-          <div class="tier-features"><span class="tier-feat">Category exclusivity</span><span class="tier-feat">Helmet &amp; chest branding</span><span class="tier-feat">Co-produced content</span><span class="tier-feat">Leadership access</span><span class="tier-feat">Origin story rights</span></div>
-        </div>
-        <div class="tier-cta-wrap"><button class="tier-btn" data-tier="01 &middot; Founding Partner" onclick="selectTier(this)">Begin Conversation</button></div>
-      </div>
-      <div class="tier-row">
-        <div class="tier-num">02</div>
-        <div class="tier-body">
-          <div class="tier-name">Official Partner</div>
-          <div class="tier-sub">4&ndash;6 positions &middot; 2-Year minimum</div>
-          <div class="tier-features"><span class="tier-feat">Category exclusivity</span><span class="tier-feat">Digital integration</span><span class="tier-feat">Training wear presence</span><span class="tier-feat">Content partnership</span></div>
-        </div>
-        <div class="tier-cta-wrap"><button class="tier-btn" data-tier="02 &middot; Official Partner" onclick="selectTier(this)">Begin Conversation</button></div>
-      </div>
-      <div class="tier-row">
-        <div class="tier-num">03</div>
-        <div class="tier-body">
-          <div class="tier-name">Federation Supplier</div>
-          <div class="tier-sub">Open &middot; 1-Year</div>
-          <div class="tier-features"><span class="tier-feat">Official designation</span><span class="tier-feat">Product integration</span><span class="tier-feat">Federation visibility</span></div>
-        </div>
-        <div class="tier-cta-wrap"><button class="tier-btn" data-tier="03 &middot; Federation Supplier" onclick="selectTier(this)">Begin Conversation</button></div>
-      </div>
-      <div class="tier-row">
-        <div class="tier-num">04</div>
-        <div class="tier-body">
-          <div class="tier-name">Community Partner</div>
-          <div class="tier-sub">Open &middot; Flexible</div>
-          <div class="tier-features"><span class="tier-feat">Local event visibility</span><span class="tier-feat">Regional rights</span><span class="tier-feat">Community activation</span></div>
-        </div>
-        <div class="tier-cta-wrap"><button class="tier-btn" data-tier="04 &middot; Community Partner" onclick="selectTier(this)">Begin Conversation</button></div>
-      </div>
-      <div class="tier-row">
-        <div class="tier-num">05</div>
-        <div class="tier-body">
-          <div class="tier-name">Player Patron</div>
-          <div class="tier-sub">Per athlete &middot; 1-Year</div>
-          <div class="tier-features"><span class="tier-feat">Player-exclusive branding</span><span class="tier-feat">Meet &amp; greet rights</span><span class="tier-feat">Individual content</span></div>
-        </div>
-        <div class="tier-cta-wrap"><button class="tier-btn" data-tier="05 &middot; Player Patron" onclick="selectTier(this)">Begin Conversation</button></div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- ORIGIN -->
 <section class="origin">
-  <div class="origin-grid">
-    <div class="origin-img">
-      <img src="/images/origin.jpg" alt="Argentina team pre-game" loading="lazy">
+  <div class="origin-media">
+    <img src="images/story.jpg" alt="Argentina player and goalie in front of net" loading="lazy">
+  </div>
+  <div class="origin-body">
+    <span class="eyebrow" data-i18n="origin.eyebrow">Why This Matters</span>
+    <h2 class="section-h" data-i18n="origin.h">Whoever comes in now writes the first chapter.</h2>
+    <p class="lede" data-i18n="origin.lede">The window doesn&rsquo;t stay open.</p>
+    <div class="origin-list">
+      <div class="origin-item">
+        <div class="origin-item-n">a /</div>
+        <div>
+          <div class="origin-item-h" data-i18n="origin.a.h">Category exclusivity</div>
+          <div class="origin-item-b" data-i18n="origin.a.b">Rights that won&rsquo;t exist at this scale in two years.</div>
+        </div>
+      </div>
+      <div class="origin-item">
+        <div class="origin-item-n">b /</div>
+        <div>
+          <div class="origin-item-h" data-i18n="origin.b.h">An origin story, live</div>
+          <div class="origin-item-b" data-i18n="origin.b.b">Your brand doesn&rsquo;t sponsor the story &mdash; it&rsquo;s part of it.</div>
+        </div>
+      </div>
+      <div class="origin-item">
+        <div class="origin-item-n">c /</div>
+        <div>
+          <div class="origin-item-h" data-i18n="origin.c.h">Proven content, zero spend</div>
+          <div class="origin-item-b" data-i18n="origin.c.b">3.6M organic views. No crew. No budget.</div>
+        </div>
+      </div>
+      <div class="origin-item">
+        <div class="origin-item-n">d /</div>
+        <div>
+          <div class="origin-item-h" data-i18n="origin.d.h">A Latin American platform</div>
+          <div class="origin-item-b" data-i18n="origin.d.b">Argentina outward to the region.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section class="lead section-pad">
+  <div class="lead-header">
+    <span class="eyebrow" data-i18n="lead.eyebrow">Leadership</span>
+    <h2 class="section-h" data-i18n="lead.h">You&rsquo;ll be talking to the people building it.</h2>
+    <p class="lede" data-i18n="lead.lede">No agencies. No gatekeepers. Every conversation starts with a founder.</p>
+  </div>
+  <div class="leaders">
+    <div class="leader">
+      <div class="leader-role" data-i18n="lead.role">Partnership Team</div>
+      <div class="leader-name">Juli&aacute;n Baumann</div>
+    </div>
+    <div class="leader">
+      <div class="leader-role" data-i18n="lead.role">Partnership Team</div>
+      <div class="leader-name">Benjamin Chubbs</div>
+    </div>
+    <div class="leader">
+      <div class="leader-role" data-i18n="lead.role">Partnership Team</div>
+      <div class="leader-name">Federico Dolan</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact section-pad" id="contact">
+  <div class="contact-grid">
+    <div class="contact-side">
+      <span class="eyebrow" data-i18n="contact.eyebrow">Contact</span>
+      <h2 class="section-h" data-i18n="contact.h">Start a conversation.</h2>
+      <p class="lede" data-i18n="contact.lede">Every message goes to the three names above. Response within 48 hours.</p>
+      <dl class="contact-facts">
+        <div class="contact-fact"><dt data-i18n="contact.direct">Direct</dt><dd><a href="mailto:partners@aahhl.com">partners@aahhl.com</a></dd></div>
+        <div class="contact-fact"><dt data-i18n="contact.federation">Federation</dt><dd data-i18n="contact.federationV">Asociaci&oacute;n Argentina de Hockey sobre Hielo</dd></div>
+        <div class="contact-fact"><dt data-i18n="contact.based">Based</dt><dd data-i18n="contact.basedV">Buenos Aires, Argentina</dd></div>
+        <div class="contact-fact"><dt data-i18n="contact.response">Response</dt><dd data-i18n="contact.responseV">Within 48 hours, from a founder</dd></div>
+      </dl>
     </div>
     <div>
-      <p class="section-label">05 &middot; Why This Matters</p>
-      <h2 class="section-h2">Whoever comes in now<br><b>writes the first chapter.</b></h2>
-      <p class="section-p">People love an origin story. We&rsquo;re living in ours right now. That&rsquo;s a window   and it won&rsquo;t stay open.</p>
-      <div class="origin-pts">
-        <div class="origin-pt"><div class="origin-pt-dot"></div><div><div class="origin-pt-h">Complete exclusivity</div><div class="origin-pt-b">Category rights that simply don&rsquo;t exist at this scale in two years.</div></div></div>
-        <div class="origin-pt"><div class="origin-pt-dot"></div><div><div class="origin-pt-h">An origin story in real time</div><div class="origin-pt-b">The narrative is happening now. Your brand is part of it from the start.</div></div></div>
-        <div class="origin-pt"><div class="origin-pt-dot"></div><div><div class="origin-pt-h">Proven content, zero budget</div><div class="origin-pt-b">3.6M views with no crew, no spend. Imagine what happens with resources.</div></div></div>
-        <div class="origin-pt"><div class="origin-pt-dot"></div><div><div class="origin-pt-h">A Latin American platform</div><div class="origin-pt-b">Argentina to the region. The fastest-growing sports market in the hemisphere.</div></div></div>
+      <form class="contact-form" id="contact-form">
+        <div class="form-row">
+          <div class="form-group"><label class="form-label" for="fn" data-i18n="form.fn">First Name</label><input class="form-input" id="fn" type="text" autocomplete="given-name" required></div>
+          <div class="form-group"><label class="form-label" for="ln" data-i18n="form.ln">Last Name</label><input class="form-input" id="ln" type="text" autocomplete="family-name" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label" for="em" data-i18n="form.em">Email</label><input class="form-input" id="em" type="email" autocomplete="email" required></div>
+          <div class="form-group"><label class="form-label" for="co" data-i18n="form.co">Company</label><input class="form-input" id="co" type="text" autocomplete="organization"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="tier" data-i18n="form.tier">Partnership Tier</label>
+          <select class="form-select" id="tier"></select>
+        </div>
+        <div class="form-group"><label class="form-label" for="msg" data-i18n="form.msg">Message</label><textarea class="form-textarea" id="msg" required data-i18n-placeholder="form.msg.ph" placeholder="Tell us about your brand and the fit you&rsquo;re seeing."></textarea></div>
+        <button type="submit" class="form-submit" id="submit-btn" data-i18n="form.send">Send Message &rarr;</button>
+        <p class="form-note" data-i18n="form.note">Your message goes directly to Juli&aacute;n Baumann, Benjamin Chubbs, and Federico Dolan.</p>
+      </form>
+      <div id="form-success">
+        <h3 data-i18n="form.successH">Message received.</h3>
+        <p data-i18n="form.successP">The AAHHL partnership team will be in touch within 48 hours.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="contact" id="contact">
-  <div class="contact-inner">
-    <p class="section-label">06 &middot; Contact</p>
-    <h2 class="section-h2">Start a conversation.</h2>
-    <p class="section-p" style="margin-top:12px">Reach the AAHHL partnership team directly. We respond within 48 hours.</p>
-    <form class="contact-form" id="contact-form">
-      <div class="form-row">
-        <div class="form-group"><label class="form-label" for="fn">First Name</label><input class="form-input" id="fn" type="text" autocomplete="given-name" required></div>
-        <div class="form-group"><label class="form-label" for="ln">Last Name</label><input class="form-input" id="ln" type="text" autocomplete="family-name" required></div>
-      </div>
-      <div class="form-group"><label class="form-label" for="em">Email</label><input class="form-input" id="em" type="email" autocomplete="email" required></div>
-      <div class="form-group"><label class="form-label" for="co">Company</label><input class="form-input" id="co" type="text" autocomplete="organization"></div>
-      <div class="form-group">
-        <label class="form-label" for="tier">Partnership Tier</label>
-        <select class="form-select" id="tier"><option value="">Select a tier&hellip;</option><option>01 &middot; Founding Partner</option><option>02 &middot; Official Partner</option><option>03 &middot; Federation Supplier</option><option>04 &middot; Community Partner</option><option>05 &middot; Player Patron</option></select>
-      </div>
-      <div class="form-group"><label class="form-label" for="msg">Message</label><textarea class="form-textarea" id="msg" required></textarea></div>
-      <button type="submit" class="form-submit" id="submit-btn">Send Message</button>
-      <p class="form-note">Your message goes directly to Juli&aacute;n Baumann, Benjamin Chubbs, and Federico Dolan.</p>
-    </form>
-    <div id="form-success">&#10003; Message sent. The team will be in touch within 48 hours.</div>
-  </div>
-</section>
-
+<!-- FOOTER -->
 <footer>
-  <div class="foot-left">&copy; 2026 AAHHL &middot; Asociaci&oacute;n Argentina de Hockey sobre Hielo &middot; Confidential</div>
-  <div class="foot-links">
-    <a href="https://instagram.com/hockeysobrehieloarg" target="_blank">Instagram</a>
-    <a href="https://tiktok.com/@argentinaicehockey" target="_blank">TikTok</a>
-    <a href="https://youtu.be/zgSlm26__-c" target="_blank">NHL Feature</a>
+  <div class="foot-top">
+    <div class="foot-brand">
+      <div class="foot-word">AAHHL</div>
+      <p class="foot-tag" data-i18n="foot.tag">Asociaci&oacute;n Argentina de Hockey sobre Hielo. IIHF member federation since 1997. Amerigol Cup Champions.</p>
+    </div>
+    <div class="foot-col">
+      <div class="foot-col-h" data-i18n="foot.explore">Explore</div>
+      <ul>
+        <li><a href="#story" data-i18n="foot.story">The Story</a></li>
+        <li><a href="#programmes" data-i18n="foot.programmes">Programmes</a></li>
+        <li><a href="#why" data-i18n="foot.why">Why 2026</a></li>
+        <li><a href="#tiers" data-i18n="foot.tiers">Partnership</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <div class="foot-col-h" data-i18n="foot.follow">Follow</div>
+      <ul>
+        <li><a href="https://instagram.com/hockeysobrehieloarg" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://tiktok.com/@argentinaicehockey" target="_blank" rel="noopener">TikTok</a></li>
+        <li><a href="https://youtu.be/zgSlm26__-c" target="_blank" rel="noopener" data-i18n="foot.nhl">NHL Feature</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <div class="foot-col-h" data-i18n="foot.contact">Contact</div>
+      <ul>
+        <li><a href="#contact" data-i18n="foot.partner">Partner With Us</a></li>
+        <li><a href="mailto:partners@aahhl.com">partners@aahhl.com</a></li>
+        <li><span class="muted">Buenos Aires, AR</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div data-i18n="foot.copy">&copy; 2026 AAHHL &middot; Confidential commercial materials</div>
+    <div data-i18n="foot.made">Made in Argentina</div>
   </div>
 </footer>
 
 <script>
-function selectTier(btn){
-  var tier=btn.dataset.tier;
-  var sel=document.getElementById('tier');
-  if(tier&&sel){for(var i=0;i<sel.options.length;i++){if(sel.options[i].text.replace(/\s/g,'').includes(tier.replace(/\s/g,''))){sel.value=sel.options[i].value;break}}}
-  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
-}
-var form=document.getElementById('contact-form');
-var success=document.getElementById('form-success');
-var submitBtn=document.getElementById('submit-btn');
-form.addEventListener('submit',function(e){
-  e.preventDefault();
-  submitBtn.disabled=true;submitBtn.textContent='Sending…';
-  var body={firstName:document.getElementById('fn').value,lastName:document.getElementById('ln').value,email:document.getElementById('em').value,company:document.getElementById('co').value,tier:document.getElementById('tier').value,message:document.getElementById('msg').value};
-  fetch('https://formspree.io/f/xpwzgzwd',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(body)}).catch(function(){}).finally(function(){form.style.display='none';success.style.display='block'});
-});
+(function(){
+  var i18n = {
+    en: {
+      'nav.story':'Story','nav.programmes':'Programmes','nav.why':'Why 2026','nav.tiers':'Partnership','nav.cta':'Partner With Us',
+      'hero.title':'Where the world ends, hockey begins.',
+      'hero.sub':'Argentina&rsquo;s national ice hockey federation. For the first time, opening the doors to founding commercial partners.',
+      'hero.cta1':'Partnership Tiers &rarr;','hero.cta2':'Read the Story',
+      'sb.federation':'Federation','sb.silverware':'Latest silverware','sb.silverwareV':'Amerigol Champions',
+      'sb.programmes':'National programmes','sb.programmesV':'Senior / Women / U20',
+      'sb.slots':'Founding slots','sb.slotsV':'2 of 2 available',
+      'creds.champ':'Amerigol Cup Champions','creds.iihf':'IIHF Member Federation','creds.nhl':'NHL Feature','creds.progs':'3 National Programmes',
+      'stat.1.k':'01 / Reach','stat.1.note':'Social followers across Instagram &amp; TikTok, growing weekly.',
+      'stat.2.k':'02 / Attention','stat.2.note':'Organic views. Zero paid media. No production budget.',
+      'stat.3.k':'03 / Audience','stat.3.note':'Female audience &mdash; a mix most sports properties cannot claim.',
+      'stat.4.k':'04 / Federation','stat.4.note':'IIHF member federation. Full sanctioning.',
+      'story.eyebrow':'The Federation',
+      'story.h':'The most football-mad country on earth is now playing the coldest sport.',
+      'story.p1':'From Maradona to Messi, Argentina has authored some of the greatest stories in world sport. That same defiance is going into ice hockey now.',
+      'story.p2':'The AAHHL isn&rsquo;t trying to catch Canada, or Finland, or the KHL. We are trying to be Argentina, with hockey &mdash; a fundamentally different, and more marketable, proposition.',
+      'prog.eyebrow':'Three Programmes','prog.h':'One flag. Three teams.',
+      'prog.1.k':'01 / National Team','prog.1.n':'Senior Men','prog.1.d':'Amerigol Cup Champions.',
+      'prog.2.k':'02 / National Team','prog.2.n':'Women','prog.2.d':'Women&rsquo;s 3x3 Series, Buenos Aires.',
+      'prog.3.k':'03 / Development','prog.3.n':'U20 &amp; Youth','prog.3.d':'The pipeline into the senior and women&rsquo;s programmes.',
+      'ban1.k':'The audience','ban1.q':'Argentine fans travel. They fill the building.','ban1.a':'Amerigol Cup &middot; Coral Springs, Florida',
+      'why.eyebrow':'Why 2026','why.h':'Five signals lining up. One window.',
+      'why.lede':'Category rights available in the 2026 window will not exist at this scale in two seasons&rsquo; time.',
+      'why.1.t':'IIHF recognition','why.1.d':'Full member of the International Ice Hockey Federation since 1997.',
+      'why.2.t':'Amerigol Champions','why.2.d':'Argentina lifted the Amerigol Cup with the senior programme.',
+      'why.3.t':'Filmed by the NHL','why.3.d':'A level of institutional credibility a young federation doesn&rsquo;t manufacture. <a href="https://youtu.be/zgSlm26__-c" target="_blank" rel="noopener">Watch the feature</a>.',
+      'why.4.t':'3.6M views, zero spend','why.4.d':'3.6M organic views. 59K followers. No media budget, no agency, no production crew.',
+      'why.5.t':'A window that closes','why.5.d':'Two founding positions. Category exclusive. Three-year runway.',
+      'ban2.k':'Amerigol Cup','ban2.q':'Argentina, holding the cup.','ban2.a':'Coral Springs, Florida',
+      'aud.eyebrow':'The Audience','aud.h':'A demographic profile most sports cannot offer.',
+      'aud.lede':'Young. Digitally native. Majority female. Overwhelmingly Argentine.',
+      'aud.1':'Female audience','aud.2':'Argentina-based','aud.3':'Core age group','aud.4':'Organic views, trailing 12 months',
+      'aud.source':'Source &middot; AAHHL Meta &amp; TikTok analytics',
+      'tiers.eyebrow':'Partnership','tiers.h':'Five tiers. One chance to be first.',
+      'tiers.note':'Only <strong>two Founding Partner</strong> positions.<br>Three-year minimum &middot; Category exclusive.',
+      'tier.1.n':'Founding Partner','tier.1.b':'2 slots','tier.1.sub':'3-year minimum &middot; Full category exclusivity',
+      'tier.2.n':'Official Partner','tier.2.sub':'4&ndash;6 positions &middot; 2-year minimum',
+      'tier.3.n':'Federation Supplier','tier.3.sub':'Open &middot; 1-year',
+      'tier.4.n':'Community Partner','tier.4.sub':'Open &middot; Flexible terms',
+      'tier.5.n':'Player Patron','tier.5.sub':'Per athlete &middot; 1-year',
+      'tier.cta':'Begin Conversation',
+      'tag.exclusivity':'Category exclusivity','tag.branding':'Helmet &amp; chest','tag.content':'Co-produced content','tag.access':'Leadership access','tag.origin':'Origin story rights',
+      'tag.digital':'Digital integration','tag.training':'Training-wear presence','tag.contentPartner':'Content partnership',
+      'tag.designation':'Official designation','tag.product':'Product integration','tag.visibility':'Federation visibility',
+      'tag.local':'Local event visibility','tag.regional':'Regional rights','tag.community':'Community activation',
+      'tag.player':'Player-exclusive branding','tag.meet':'Meet &amp; greet rights','tag.individual':'Individual content',
+      'origin.eyebrow':'Why This Matters','origin.h':'Whoever comes in now writes the first chapter.',
+      'origin.lede':'The window doesn&rsquo;t stay open.',
+      'origin.a.h':'Category exclusivity','origin.a.b':'Rights that won&rsquo;t exist at this scale in two years.',
+      'origin.b.h':'An origin story, live','origin.b.b':'Your brand doesn&rsquo;t sponsor the story &mdash; it&rsquo;s part of it.',
+      'origin.c.h':'Proven content, zero spend','origin.c.b':'3.6M organic views. No crew. No budget.',
+      'origin.d.h':'A Latin American platform','origin.d.b':'Argentina outward to the region.',
+      'lead.eyebrow':'Leadership','lead.h':'You&rsquo;ll be talking to the people building it.',
+      'lead.lede':'No agencies. No gatekeepers. Every conversation starts with a founder.',
+      'lead.role':'Partnership Team',
+      'contact.eyebrow':'Contact','contact.h':'Start a conversation.',
+      'contact.lede':'Every message goes to the three names above. Response within 48 hours.',
+      'contact.direct':'Direct','contact.federation':'Federation','contact.federationV':'Asociaci&oacute;n Argentina de Hockey sobre Hielo',
+      'contact.based':'Based','contact.basedV':'Buenos Aires, Argentina',
+      'contact.response':'Response','contact.responseV':'Within 48 hours, from a founder',
+      'form.fn':'First Name','form.ln':'Last Name','form.em':'Email','form.co':'Company','form.tier':'Partnership Tier','form.msg':'Message',
+      'form.msg.ph':'Tell us about your brand and the fit you’re seeing.',
+      'form.send':'Send Message &rarr;','form.sending':'Sending&hellip;',
+      'form.note':'Your message goes directly to Julián Baumann, Benjamin Chubbs, and Federico Dolan.',
+      'form.successH':'Message received.','form.successP':'The AAHHL partnership team will be in touch within 48 hours.',
+      'form.selectTier':'Select a tier…','form.exploring':'Not sure yet · Exploring',
+      'foot.tag':'Asociación Argentina de Hockey sobre Hielo. IIHF member federation since 1997. Amerigol Cup Champions.',
+      'foot.explore':'Explore','foot.follow':'Follow','foot.contact':'Contact',
+      'foot.story':'The Story','foot.programmes':'Programmes','foot.why':'Why 2026','foot.tiers':'Partnership',
+      'foot.nhl':'NHL Feature','foot.partner':'Partner With Us',
+      'foot.copy':'© 2026 AAHHL · Confidential commercial materials','foot.made':'Made in Argentina'
+    },
+    es: {
+      'nav.story':'Historia','nav.programmes':'Programas','nav.why':'Por qué 2026','nav.tiers':'Patrocinio','nav.cta':'Ser Patrocinador',
+      'hero.title':'Donde el mundo se acaba, empieza el hockey.',
+      'hero.sub':'La federación argentina de hockey sobre hielo. Por primera vez en nuestra historia, abrimos las puertas a socios comerciales fundadores.',
+      'hero.cta1':'Niveles de Patrocinio &rarr;','hero.cta2':'Leer la Historia',
+      'sb.federation':'Federación','sb.silverware':'Último título','sb.silverwareV':'Campeones Amerigol',
+      'sb.programmes':'Programas nacionales','sb.programmesV':'Senior / Femenino / Sub-20',
+      'sb.slots':'Cupos fundadores','sb.slotsV':'2 de 2 disponibles',
+      'creds.champ':'Campeones Copa Amerigol','creds.iihf':'Federación Miembro IIHF','creds.nhl':'Documental NHL','creds.progs':'3 Programas Nacionales',
+      'stat.1.k':'01 / Alcance','stat.1.note':'Seguidores en Instagram y TikTok, con crecimiento semanal.',
+      'stat.2.k':'02 / Atención','stat.2.note':'Vistas orgánicas. Cero pauta paga. Sin presupuesto de producción.',
+      'stat.3.k':'03 / Audiencia','stat.3.note':'Audiencia femenina — una mezcla que pocas propiedades deportivas pueden ofrecer.',
+      'stat.4.k':'04 / Federación','stat.4.note':'Federación miembro de la IIHF. Con reconocimiento pleno.',
+      'story.eyebrow':'La Federación',
+      'story.h':'El país más futbolero del mundo ahora juega el deporte más frío.',
+      'story.p1':'De Maradona a Messi, Argentina escribió algunas de las historias más grandes del deporte mundial. Esa misma rebeldía se está volcando al hockey sobre hielo.',
+      'story.p2':'La AAHHL no busca alcanzar a Canadá, ni a Finlandia, ni a la KHL. Buscamos ser Argentina, con hockey — una propuesta fundamentalmente distinta y comercialmente más atractiva.',
+      'prog.eyebrow':'Tres Programas','prog.h':'Una bandera. Tres equipos.',
+      'prog.1.k':'01 / Equipo Nacional','prog.1.n':'Masculino Senior','prog.1.d':'Campeones Copa Amerigol.',
+      'prog.2.k':'02 / Equipo Nacional','prog.2.n':'Femenino','prog.2.d':'3x3 Series Femenino, Buenos Aires.',
+      'prog.3.k':'03 / Desarrollo','prog.3.n':'Sub-20 y Juveniles','prog.3.d':'La cantera de los programas senior y femenino.',
+      'ban1.k':'La audiencia','ban1.q':'Los hinchas argentinos viajan. Llenan el estadio.','ban1.a':'Copa Amerigol &middot; Coral Springs, Florida',
+      'why.eyebrow':'Por qué 2026','why.h':'Cinco señales alineadas. Una ventana.',
+      'why.lede':'Los derechos por categoría disponibles para la temporada 2026 no van a existir a esta escala en dos temporadas.',
+      'why.1.t':'Reconocimiento IIHF','why.1.d':'Miembro pleno de la Federación Internacional de Hockey sobre Hielo desde 1997.',
+      'why.2.t':'Campeones Amerigol','why.2.d':'Argentina levantó la Copa Amerigol con el programa senior.',
+      'why.3.t':'Filmados por la NHL','why.3.d':'Un nivel de credibilidad institucional que una federación joven no fabrica. <a href="https://youtu.be/zgSlm26__-c" target="_blank" rel="noopener">Ver el documental</a>.',
+      'why.4.t':'3,6M de vistas, cero inversión','why.4.d':'3,6M de vistas orgánicas. 59K seguidores. Sin presupuesto, sin agencia, sin equipo de producción.',
+      'why.5.t':'Una ventana que se cierra','why.5.d':'Dos posiciones fundadoras. Categoría exclusiva. Tres años de recorrido.',
+      'ban2.k':'Copa Amerigol','ban2.q':'Argentina, con la copa.','ban2.a':'Coral Springs, Florida',
+      'aud.eyebrow':'La Audiencia','aud.h':'Un perfil demográfico que pocos deportes pueden ofrecer.',
+      'aud.lede':'Jóvenes. Nativos digitales. Mayoritariamente mujeres. Fuertemente argentinos.',
+      'aud.1':'Audiencia femenina','aud.2':'En Argentina','aud.3':'Franja etaria principal','aud.4':'Vistas orgánicas, últimos 12 meses',
+      'aud.source':'Fuente &middot; Analíticas Meta y TikTok de AAHHL',
+      'tiers.eyebrow':'Patrocinio','tiers.h':'Cinco niveles. Una oportunidad de ser el primero.',
+      'tiers.note':'Sólo <strong>dos posiciones de Founding Partner</strong>.<br>Mínimo tres años &middot; Categoría exclusiva.',
+      'tier.1.n':'Founding Partner','tier.1.b':'2 cupos','tier.1.sub':'Mínimo 3 años &middot; Exclusividad total de categoría',
+      'tier.2.n':'Official Partner','tier.2.sub':'4–6 posiciones &middot; Mínimo 2 años',
+      'tier.3.n':'Proveedor Oficial','tier.3.sub':'Abierto &middot; 1 año',
+      'tier.4.n':'Socio Comunitario','tier.4.sub':'Abierto &middot; Términos flexibles',
+      'tier.5.n':'Padrino de Jugador','tier.5.sub':'Por atleta &middot; 1 año',
+      'tier.cta':'Iniciar Conversación',
+      'tag.exclusivity':'Exclusividad de categoría','tag.branding':'Casco y pecho','tag.content':'Contenido co-producido','tag.access':'Acceso a la dirigencia','tag.origin':'Derechos sobre la historia fundacional',
+      'tag.digital':'Integración digital','tag.training':'Presencia en indumentaria de entrenamiento','tag.contentPartner':'Alianza de contenido',
+      'tag.designation':'Denominación oficial','tag.product':'Integración de producto','tag.visibility':'Visibilidad de la federación',
+      'tag.local':'Visibilidad en eventos locales','tag.regional':'Derechos regionales','tag.community':'Activación comunitaria',
+      'tag.player':'Branding exclusivo de jugador','tag.meet':'Derechos de meet &amp; greet','tag.individual':'Contenido individual',
+      'origin.eyebrow':'Por qué Importa','origin.h':'Quien entra ahora escribe el primer capítulo.',
+      'origin.lede':'La ventana no se queda abierta.',
+      'origin.a.h':'Exclusividad de categoría','origin.a.b':'Derechos que no van a existir a esta escala en dos años.',
+      'origin.b.h':'Una historia fundacional, en vivo','origin.b.b':'Su marca no patrocina la historia — forma parte de ella.',
+      'origin.c.h':'Contenido probado, cero inversión','origin.c.b':'3,6M de vistas orgánicas. Sin equipo. Sin presupuesto.',
+      'origin.d.h':'Una plataforma latinoamericana','origin.d.b':'Argentina hacia la región.',
+      'lead.eyebrow':'Dirigencia','lead.h':'Va a hablar con quienes lo están construyendo.',
+      'lead.lede':'Sin agencias. Sin intermediarios. Toda conversación empieza con un fundador.',
+      'lead.role':'Equipo de Patrocinios',
+      'contact.eyebrow':'Contacto','contact.h':'Iniciar una conversación.',
+      'contact.lede':'Cada mensaje llega a los tres nombres de arriba. Respuesta dentro de 48 horas.',
+      'contact.direct':'Directo','contact.federation':'Federación','contact.federationV':'Asociación Argentina de Hockey sobre Hielo',
+      'contact.based':'Sede','contact.basedV':'Buenos Aires, Argentina',
+      'contact.response':'Respuesta','contact.responseV':'Dentro de 48 horas, de un fundador',
+      'form.fn':'Nombre','form.ln':'Apellido','form.em':'Email','form.co':'Empresa','form.tier':'Nivel de Patrocinio','form.msg':'Mensaje',
+      'form.msg.ph':'Cuéntenos sobre su marca y el encaje que ven.',
+      'form.send':'Enviar Mensaje &rarr;','form.sending':'Enviando&hellip;',
+      'form.note':'Su mensaje llega directamente a Julián Baumann, Benjamin Chubbs y Federico Dolan.',
+      'form.successH':'Mensaje recibido.','form.successP':'El equipo de patrocinios de la AAHHL estará en contacto dentro de 48 horas.',
+      'form.selectTier':'Seleccione un nivel…','form.exploring':'Aún no sé · Explorando',
+      'foot.tag':'Asociación Argentina de Hockey sobre Hielo. Federación miembro de la IIHF desde 1997. Campeones Copa Amerigol.',
+      'foot.explore':'Explorar','foot.follow':'Seguir','foot.contact':'Contacto',
+      'foot.story':'La Historia','foot.programmes':'Programas','foot.why':'Por qué 2026','foot.tiers':'Patrocinio',
+      'foot.nhl':'Documental NHL','foot.partner':'Ser Patrocinador',
+      'foot.copy':'© 2026 AAHHL · Material comercial confidencial','foot.made':'Hecho en Argentina'
+    }
+  };
+
+  var tierKeys = ['tier.1.n','tier.2.n','tier.3.n','tier.4.n','tier.5.n'];
+
+  function rebuildTierSelect(lang){
+    var sel = document.getElementById('tier');
+    if (!sel) return;
+    var current = sel.value;
+    sel.innerHTML = '';
+    var opt0 = document.createElement('option');
+    opt0.value = '';
+    opt0.textContent = i18n[lang]['form.selectTier'];
+    sel.appendChild(opt0);
+    tierKeys.forEach(function(k, i){
+      var opt = document.createElement('option');
+      var label = (i+1<10?'0':'') + (i+1) + ' · ' + i18n[lang][k];
+      opt.value = label;
+      opt.textContent = label;
+      sel.appendChild(opt);
+    });
+    var optX = document.createElement('option');
+    optX.value = i18n[lang]['form.exploring'];
+    optX.textContent = i18n[lang]['form.exploring'];
+    sel.appendChild(optX);
+    if (current) {
+      for (var i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].value === current || sel.options[i].value.slice(0,2) === current.slice(0,2)) { sel.value = sel.options[i].value; break; }
+      }
+    }
+  }
+
+  function applyLang(lang){
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+    var dict = i18n[lang];
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      if (dict[key] != null) el.innerHTML = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el){
+      var key = el.getAttribute('data-i18n-placeholder');
+      if (dict[key] != null) el.placeholder = dict[key].replace(/&rsquo;/g,'’').replace(/&hellip;/g,'…');
+    });
+    rebuildTierSelect(lang);
+    document.querySelectorAll('.lang-toggle button').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+    try { localStorage.setItem('aahhl.lang', lang); } catch(e){}
+  }
+
+  var saved;
+  try { saved = localStorage.getItem('aahhl.lang'); } catch(e){}
+  if (saved !== 'en' && saved !== 'es') saved = 'en';
+  applyLang(saved);
+
+  document.querySelectorAll('.lang-toggle button').forEach(function(b){
+    b.addEventListener('click', function(){ applyLang(b.getAttribute('data-lang')); });
+  });
+
+  var nav = document.getElementById('nav');
+  var onScroll = function(){
+    if (window.scrollY > 60) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  document.querySelectorAll('.tier-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var key = btn.getAttribute('data-tier-key');
+      var lang = document.documentElement.getAttribute('data-lang') || 'en';
+      var name = key ? i18n[lang][key] : '';
+      var idx = tierKeys.indexOf(key);
+      var label = (idx >= 0) ? ((idx+1<10?'0':'') + (idx+1) + ' · ' + name) : name;
+      var sel = document.getElementById('tier');
+      if (sel && label) {
+        for (var i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].value === label) { sel.value = label; break; }
+        }
+      }
+      document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+    });
+  });
+
+  var form = document.getElementById('contact-form');
+  var success = document.getElementById('form-success');
+  var submitBtn = document.getElementById('submit-btn');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var lang = document.documentElement.getAttribute('data-lang') || 'en';
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = i18n[lang]['form.sending'];
+    var body = {
+      firstName: document.getElementById('fn').value,
+      lastName: document.getElementById('ln').value,
+      email: document.getElementById('em').value,
+      company: document.getElementById('co').value,
+      tier: document.getElementById('tier').value,
+      message: document.getElementById('msg').value,
+      _lang: lang
+    };
+    fetch('https://formspree.io/f/xpwzgzwd', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify(body)
+    })
+    .catch(function(){})
+    .finally(function(){
+      form.style.display = 'none';
+      success.style.display = 'block';
+      success.scrollIntoView({behavior:'smooth', block:'center'});
+    });
+  });
+})();
 </script>
 </body>
 </html>

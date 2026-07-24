@@ -1,5 +1,6 @@
 {
-  "buildCommand": "bun run build",
-  "outputDirectory": "dist",
-  "framework": null
+  "framework": null,
+  "installCommand": "echo skip install",
+  "buildCommand": "mkdir -p dist && cp index.html dist/ && cp -r images dist/",
+  "outputDirectory": "dist"
 }
