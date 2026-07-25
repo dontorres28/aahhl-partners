@@ -918,7 +918,7 @@
 
   var saved;
   try { saved = localStorage.getItem('aahhl.lang'); } catch(e){}
-  if (saved !== 'en' && saved !== 'es') saved = 'en';
+  if (saved !== 'en' && saved !== 'es') saved = 'es';
   applyLang(saved);
 
   document.querySelectorAll('.lang-toggle button').forEach(function(b){
