@@ -86,12 +86,6 @@
     .sb-k{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.38);font-weight:500}
     .sb-v{font-family:'Supreme',sans-serif;font-size:13.5px;font-weight:600;color:rgba(255,255,255,.92);letter-spacing:-.01em;line-height:1.25}
 
-    /* CREDENTIAL STRIP */
-    .creds{background:var(--white);border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 var(--pad);gap:0;overflow-x:auto}
-    .creds-item{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;color:var(--dim);padding:14px 32px 14px 0;margin-right:32px;border-right:1px solid var(--line);white-space:nowrap;flex-shrink:0}
-    .creds-item:last-child{border-right:none;margin-right:0}
-    .creds-item.accent{color:var(--ink);font-weight:700}
-
     /* Section shell */
     .section-pad{padding:clamp(72px,9vw,128px) var(--pad)}
     .eyebrow{font-family:'Switzer',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);font-weight:600;display:inline-block;margin-bottom:22px}
@@ -284,8 +278,6 @@
       .foot-bottom{flex-direction:column;align-items:flex-start}
       .form-row{grid-template-columns:1fr}
       .contact-fact{grid-template-columns:1fr;gap:4px}
-      .creds{gap:12px 20px;font-size:10.5px;justify-content:flex-start}
-      .creds .sep{display:none}
     }
 
     @media (prefers-reduced-motion: reduce){
@@ -348,14 +340,6 @@
   </div>
 </section>
 
-<!-- CREDENTIAL STRIP -->
-<div class="creds">
-  <span class="creds-item accent" data-i18n="creds.champ">AMERIGOL Latam Cup Champions</span>
-  <span class="creds-item" data-i18n="creds.iihf">IIHF Member Federation</span>
-  <span class="creds-item" data-i18n="creds.nhl">NHL Feature</span>
-  <span class="creds-item" data-i18n="creds.progs">3 National Programmes</span>
-  <span class="creds-item">Buenos Aires</span>
-</div>
 
 <!-- STATS -->
 <section class="stats">
