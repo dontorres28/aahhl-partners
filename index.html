@@ -86,14 +86,11 @@
     .sb-k{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.38);font-weight:500}
     .sb-v{font-family:'Supreme',sans-serif;font-size:13.5px;font-weight:600;color:rgba(255,255,255,.92);letter-spacing:-.01em;line-height:1.25}
 
-    /* CREDENTIAL MARQUEE */
-    .creds{overflow:hidden;border-bottom:1px solid var(--line);background:var(--white);cursor:default}
-    .creds-track{display:inline-flex;white-space:nowrap;animation:marquee-scroll 36s linear infinite}
-    .creds:hover .creds-track{animation-play-state:paused}
-    .creds-item{display:inline-flex;align-items:center;white-space:nowrap;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;color:var(--dim);padding:13px 40px;border-right:1px solid var(--line)}
+    /* CREDENTIAL STRIP */
+    .creds{background:var(--white);border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 var(--pad);gap:0;overflow-x:auto}
+    .creds-item{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;color:var(--dim);padding:14px 32px 14px 0;margin-right:32px;border-right:1px solid var(--line);white-space:nowrap;flex-shrink:0}
+    .creds-item:last-child{border-right:none;margin-right:0}
     .creds-item.accent{color:var(--ink);font-weight:700}
-    .creds-dot{display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--sky);margin:0 0 1px}
-    @keyframes marquee-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
     /* Section shell */
     .section-pad{padding:clamp(72px,9vw,128px) var(--pad)}
@@ -351,9 +348,13 @@
   </div>
 </section>
 
-<!-- CREDENTIAL MARQUEE -->
-<div class="creds" aria-label="Federation credentials">
-  <div class="creds-track" aria-hidden="true"><span class="creds-item accent">AMERIGOL Latam Cup Champions</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">IIHF Member Federation</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">NHL Feature</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">3 National Programmes</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">Buenos Aires</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item accent">AMERIGOL Latam Cup Champions</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">IIHF Member Federation</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">NHL Feature</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">3 National Programmes</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">Buenos Aires</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item accent">AMERIGOL Latam Cup Champions</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">IIHF Member Federation</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">NHL Feature</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">3 National Programmes</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">Buenos Aires</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item accent">AMERIGOL Latam Cup Champions</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">IIHF Member Federation</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">NHL Feature</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">3 National Programmes</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">Buenos Aires</span><span class="creds-item"><span class="creds-dot"></span></span></div>
+<!-- CREDENTIAL STRIP -->
+<div class="creds">
+  <span class="creds-item accent" data-i18n="creds.champ">AMERIGOL Latam Cup Champions</span>
+  <span class="creds-item" data-i18n="creds.iihf">IIHF Member Federation</span>
+  <span class="creds-item" data-i18n="creds.nhl">NHL Feature</span>
+  <span class="creds-item" data-i18n="creds.progs">3 National Programmes</span>
+  <span class="creds-item">Buenos Aires</span>
 </div>
 
 <!-- STATS -->
