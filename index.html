@@ -275,6 +275,26 @@
     @media (prefers-reduced-motion: reduce){
       *,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important}
     }
+  /* ── Modal ─────────────────────────────────────────────────── */
+  .modal-overlay{
+    display:none;position:fixed;inset:0;z-index:9000;
+    background:rgba(10,10,10,.72);backdrop-filter:blur(6px);
+    align-items:center;justify-content:center;padding:1.5rem;
+  }
+  .modal-overlay.open{display:flex;}
+  .modal-box{
+    background:var(--paper);width:100%;max-width:640px;max-height:90vh;
+    overflow-y:auto;padding:2.5rem 2rem;position:relative;
+    border:1px solid var(--line);
+  }
+  .modal-close{
+    position:absolute;top:1.25rem;right:1.25rem;
+    background:none;border:none;cursor:pointer;
+    color:var(--dim);font-size:1.4rem;line-height:1;padding:.25rem .5rem;
+  }
+  .modal-close:hover{color:var(--ink);}
+  .modal-h{font-family:'Supreme',sans-serif;font-size:1.5rem;font-weight:700;margin-bottom:.25rem;}
+  .modal-sub{color:var(--dim);font-size:.85rem;margin-bottom:1.75rem;}
   </style>
 </head>
 <body>
@@ -590,7 +610,7 @@
         <div class="contact-fact"><dt data-i18n="contact.direct">Direct</dt><dd><a href="mailto:partners@aahhl.com">partners@aahhl.com</a></dd></div>
         <div class="contact-fact"><dt data-i18n="contact.federation">Federation</dt><dd data-i18n="contact.federationV">Asociaci&oacute;n Argentina de Hockey sobre Hielo</dd></div>
         <div class="contact-fact"><dt data-i18n="contact.based">Based</dt><dd data-i18n="contact.basedV">Buenos Aires, Argentina</dd></div>
-        <div class="contact-fact"><dt data-i18n="contact.response">Response</dt><dd data-i18n="contact.responseV">Within 48 hours, from a founder</dd></div>
+        <div class="contact-fact"><dt data-i18n="contact.response">Response</dt><dd data-i18n="contact.responseV">Within 48 hours</dd></div>
       </dl>
     </div>
     <div>
@@ -618,6 +638,35 @@
     </div>
   </div>
 </section>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <p class="modal-h" id="modal-heading" data-i18n="contact.h">Start a conversation.</p>
+    <p class="modal-sub" data-i18n="contact.lede">Every message goes to the three names above. Response within 48 hours.</p>
+    <form class="contact-form" id="modal-form">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label" for="m-fn" data-i18n="form.fn">First Name</label><input class="form-input" id="m-fn" type="text" autocomplete="given-name" required></div>
+        <div class="form-group"><label class="form-label" for="m-ln" data-i18n="form.ln">Last Name</label><input class="form-input" id="m-ln" type="text" autocomplete="family-name" required></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label" for="m-em" data-i18n="form.em">Email</label><input class="form-input" id="m-em" type="email" autocomplete="email" required></div>
+        <div class="form-group"><label class="form-label" for="m-co" data-i18n="form.co">Company</label><input class="form-input" id="m-co" type="text" autocomplete="organization"></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="m-tier" data-i18n="form.tier">Partnership Tier</label>
+        <select class="form-select" id="m-tier"></select>
+      </div>
+      <div class="form-group"><label class="form-label" for="m-msg" data-i18n="form.msg">Message</label><textarea class="form-textarea" id="m-msg" required data-i18n-placeholder="form.msg.ph" placeholder="Tell us about your brand and the fit you're seeing."></textarea></div>
+      <button type="submit" class="form-submit" id="m-submit-btn" data-i18n="form.send">Send Message &rarr;</button>
+    </form>
+    <div id="modal-success" style="display:none;text-align:center;padding:2rem 0;">
+      <h3 data-i18n="form.successH">Message received.</h3>
+      <p style="margin-top:.5rem;" data-i18n="form.successP">The AAHHL partnership team will be in touch within 48 hours.</p>
+    </div>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -721,7 +770,7 @@
       'contact.lede':'Every message goes to the three names above. Response within 48 hours.',
       'contact.direct':'Direct','contact.federation':'Federation','contact.federationV':'Asociaci&oacute;n Argentina de Hockey sobre Hielo',
       'contact.based':'Based','contact.basedV':'Buenos Aires, Argentina',
-      'contact.response':'Response','contact.responseV':'Within 48 hours, from a founder',
+      'contact.response':'Response','contact.responseV':'Within 48 hours',
       'form.fn':'First Name','form.ln':'Last Name','form.em':'Email','form.co':'Company','form.tier':'Partnership Tier','form.msg':'Message',
       'form.msg.ph':'Tell us about your brand and the fit you’re seeing.',
       'form.send':'Send Message &rarr;','form.sending':'Sending&hellip;',
@@ -794,7 +843,7 @@
       'contact.lede':'Cada mensaje llega a los tres nombres de arriba. Respuesta dentro de 48 horas.',
       'contact.direct':'Directo','contact.federation':'Federación','contact.federationV':'Asociación Argentina de Hockey sobre Hielo',
       'contact.based':'Sede','contact.basedV':'Buenos Aires, Argentina',
-      'contact.response':'Respuesta','contact.responseV':'Dentro de 48 horas, de un fundador',
+      'contact.response':'Respuesta','contact.responseV':'Dentro de 48 horas',
       'form.fn':'Nombre','form.ln':'Apellido','form.em':'Email','form.co':'Empresa','form.tier':'Nivel de Patrocinio','form.msg':'Mensaje',
       'form.msg.ph':'Cuéntenos sobre su marca y el encaje que ven.',
       'form.send':'Enviar Mensaje &rarr;','form.sending':'Enviando&hellip;',
@@ -822,7 +871,7 @@
     sel.appendChild(opt0);
     tierKeys.forEach(function(k, i){
       var opt = document.createElement('option');
-      var label = (i+1<10?'0':'') + (i+1) + ' · ' + i18n[lang][k];
+      var label = (i+1<10?'0':'') + (i+1) + '  ' + i18n[lang][k];
       opt.value = label;
       opt.textContent = label;
       sel.appendChild(opt);
@@ -863,7 +912,11 @@
   applyLang(saved);
 
   document.querySelectorAll('.lang-toggle button').forEach(function(b){
-    b.addEventListener('click', function(){ applyLang(b.getAttribute('data-lang')); });
+    b.addEventListener('click', function(){
+      var lang = b.getAttribute('data-lang');
+      applyLang(lang);
+      rebuildModalTierSelect(lang);
+    });
   });
 
   var nav = document.getElementById('nav');
@@ -874,20 +927,106 @@
   onScroll();
   window.addEventListener('scroll', onScroll, {passive:true});
 
+  // ── Modal open/close ─────────────────────────────────────────
+  function rebuildModalTierSelect(lang){
+    var sel = document.getElementById('m-tier');
+    if (!sel) return;
+    var current = sel.value;
+    sel.innerHTML = '';
+    var opt0 = document.createElement('option');
+    opt0.value = '';
+    opt0.textContent = i18n[lang]['form.selectTier'];
+    sel.appendChild(opt0);
+    tierKeys.forEach(function(k, i){
+      var opt = document.createElement('option');
+      var label = (i+1<10?'0':'') + (i+1) + '  ' + i18n[lang][k];
+      opt.value = label;
+      opt.textContent = label;
+      sel.appendChild(opt);
+    });
+    var optX = document.createElement('option');
+    optX.value = i18n[lang]['form.exploring'];
+    optX.textContent = i18n[lang]['form.exploring'];
+    sel.appendChild(optX);
+    if (current) {
+      for (var i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].value === current) { sel.value = sel.options[i].value; break; }
+      }
+    }
+  }
+
+  function openModal(tierLabel){
+    var lang = document.documentElement.getAttribute('data-lang') || 'en';
+    rebuildModalTierSelect(lang);
+    if (tierLabel) {
+      var sel = document.getElementById('m-tier');
+      for (var i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].value === tierLabel) { sel.value = tierLabel; break; }
+      }
+    }
+    document.getElementById('modal-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('m-fn').focus();
+  }
+
+  function closeModal(){
+    document.getElementById('modal-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('modal-close').addEventListener('click', closeModal);
+  document.getElementById('modal-overlay').addEventListener('click', function(e){
+    if (e.target === this) closeModal();
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeModal();
+  });
+
+  // Nav CTA opens modal
+  document.querySelector('.nav-cta').addEventListener('click', function(e){
+    e.preventDefault();
+    openModal(null);
+  });
+
+  // Tier buttons open modal with pre-selected tier
   document.querySelectorAll('.tier-btn').forEach(function(btn){
     btn.addEventListener('click', function(){
       var key = btn.getAttribute('data-tier-key');
       var lang = document.documentElement.getAttribute('data-lang') || 'en';
       var name = key ? i18n[lang][key] : '';
       var idx = tierKeys.indexOf(key);
-      var label = (idx >= 0) ? ((idx+1<10?'0':'') + (idx+1) + ' · ' + name) : name;
-      var sel = document.getElementById('tier');
-      if (sel && label) {
-        for (var i = 0; i < sel.options.length; i++) {
-          if (sel.options[i].value === label) { sel.value = label; break; }
-        }
-      }
-      document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+      var label = (idx >= 0) ? ((idx+1<10?'0':'') + (idx+1) + '  ' + name) : name;
+      openModal(label);
+    });
+  });
+
+  // Modal form submit
+  var modalForm = document.getElementById('modal-form');
+  var modalSuccess = document.getElementById('modal-success');
+  var modalSubmitBtn = document.getElementById('m-submit-btn');
+  modalForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var lang = document.documentElement.getAttribute('data-lang') || 'en';
+    modalSubmitBtn.disabled = true;
+    modalSubmitBtn.innerHTML = i18n[lang]['form.sending'];
+    var body = {
+      firstName: document.getElementById('m-fn').value,
+      lastName: document.getElementById('m-ln').value,
+      email: document.getElementById('m-em').value,
+      company: document.getElementById('m-co').value,
+      tier: document.getElementById('m-tier').value,
+      message: document.getElementById('m-msg').value,
+      _lang: lang
+    };
+    fetch('https://formspree.io/f/xpwzgzwd', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify(body)
+    })
+    .catch(function(){})
+    .finally(function(){
+      modalForm.style.display = 'none';
+      modalSuccess.style.display = 'block';
     });
   });
 
