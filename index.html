@@ -112,13 +112,13 @@
 
     /* PROGRAMMES — now light */
     .programmes{background:var(--paper);color:var(--ink);border-top:1px solid var(--line)}
-    .prog-header{max-width:920px;margin-bottom:64px}
+    .prog-header{max-width:920px;margin-bottom:40px}
     .prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
     .prog-card{background:var(--white);display:flex;flex-direction:column}
-    .prog-media{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--paper-2)}
+    .prog-media{position:relative;aspect-ratio:3/2;overflow:hidden;background:var(--paper-2)}
     .prog-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
     .prog-card:hover .prog-media img{transform:scale(1.03)}
-    .prog-body{padding:26px 28px 32px;display:flex;flex-direction:column;gap:6px}
+    .prog-body{padding:16px 20px 20px;display:flex;flex-direction:column;gap:4px}
     .prog-idx{font-family:'Switzer',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);font-weight:600;margin-bottom:6px}
     .prog-name{font-family:'Supreme',sans-serif;font-weight:800;font-size:26px;letter-spacing:-.025em;color:var(--ink);line-height:1}
     .prog-note{font-family:'Switzer',sans-serif;font-size:13.5px;color:var(--mid);line-height:1.55;margin-top:4px}
@@ -137,7 +137,7 @@
 
     /* BANNER */
     .banner{position:relative;height:66vh;min-height:480px;overflow:hidden;background:var(--ink)}
-    .banner img{width:100%;height:100%;object-fit:cover;filter:brightness(.6)}
+    .banner img{width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:brightness(.6)}
     .banner-inner{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(32px,6vw,72px);color:#fff}
     .banner-eyebrow{font-family:'Switzer',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:18px;font-weight:600}
     .banner-quote{font-family:'Supreme',sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,50px);line-height:.97;letter-spacing:-.03em;color:#fff;max-width:1000px}
@@ -278,14 +278,20 @@
   /* ── Modal ─────────────────────────────────────────────────── */
   .modal-overlay{
     display:none;position:fixed;inset:0;z-index:9000;
-    background:rgba(10,10,10,.72);backdrop-filter:blur(6px);
+    background:rgba(10,10,10,.55);backdrop-filter:blur(18px) saturate(1.4);
     align-items:center;justify-content:center;padding:1.5rem;
+    opacity:0;transition:opacity .25s ease;
   }
-  .modal-overlay.open{display:flex;}
+  .modal-overlay.open{display:flex;opacity:1;}
   .modal-box{
-    background:var(--paper);width:100%;max-width:640px;max-height:90vh;
+    background:rgba(250,250,249,.78);
+    backdrop-filter:blur(32px) saturate(1.8);
+    -webkit-backdrop-filter:blur(32px) saturate(1.8);
+    border:1px solid rgba(255,255,255,.55);
+    box-shadow:0 8px 48px rgba(10,10,10,.18), 0 1.5px 0 rgba(255,255,255,.6) inset;
+    border-radius:24px;
+    width:100%;max-width:620px;max-height:90vh;
     overflow-y:auto;padding:2.5rem 2rem;position:relative;
-    border:1px solid var(--line);
   }
   .modal-close{
     position:absolute;top:1.25rem;right:1.25rem;
@@ -361,7 +367,7 @@
 <!-- STORY -->
 <section class="story" id="story">
   <div class="story-media">
-    <img src="images/puck.jpg" alt="Argentina national team jersey detail" loading="lazy">
+    <img src="images/story2.jpg" alt="Argentina women's player with Bauer stick under stadium lights" loading="lazy">
   </div>
   <div class="story-body">
     
@@ -716,7 +722,7 @@
       'hero.sub':'Argentina&rsquo;s national ice hockey federation. For the first time, opening the doors to founding commercial partners.',
       'hero.cta1':'Partnership Tiers &rarr;','hero.cta2':'Read the Story',
       'sb.federation':'Federation','sb.silverware':'Latest silverware','sb.silverwareV':'AMERIGOL Latam Cup Champions',
-      'sb.programmes':'National programmes','sb.programmesV':'Senior / Women / Juveniles',
+      'sb.programmes':'National programmes','sb.programmesV':'Men\'s / Women\'s / Juniors',
       'sb.slots':'Founding slots','sb.slotsV':'2 of 2 available',
       'creds.champ':'AMERIGOL Latam Cup Champions','creds.iihf':'IIHF Member Federation','creds.nhl':'NHL Feature','creds.progs':'3 National Programmes',
       'stat.1.k':'01 / Reach','stat.1.note':'Social followers across Instagram &amp; TikTok, growing weekly.',
@@ -728,9 +734,9 @@
       'story.p1':'From Maradona to Messi, Argentina has authored some of the greatest stories in world sport. That same defiance is going into ice hockey now.',
       'story.p2':'The AAHHL isn&rsquo;t trying to catch Canada, or Finland, or the KHL. We are trying to be Argentina, with hockey. A fundamentally different, and more marketable, proposition.',
       'prog.eyebrow':'Three Programmes','prog.h':'One flag. Three teams.',
-      'prog.1.k':'01 / National Team','prog.1.n':'Senior Men','prog.1.d':'AMERIGOL Latam Cup Champions.',
-      'prog.2.k':'02 / National Team','prog.2.n':'Women','prog.2.d':'Women&rsquo;s 3x3 Series, Buenos Aires.',
-      'prog.3.k':'03 / Development','prog.3.n':'Juveniles','prog.3.d':'The pipeline into the senior and women&rsquo;s programmes.',
+      'prog.1.k':'01 / National Team','prog.1.n':'Men\'s','prog.1.d':'AMERIGOL Latam Cup Champions.',
+      'prog.2.k':'02 / National Team','prog.2.n':'Women\'s','prog.2.d':'Women&rsquo;s 3x3 Series, Buenos Aires.',
+      'prog.3.k':'03 / Development','prog.3.n':'Juniors','prog.3.d':'The pipeline into the senior and women&rsquo;s programmes.',
       'ban1.k':'The audience','ban1.q':'Argentine fans travel. They fill the building.','ban1.a':'AMERIGOL Latam Cup, Coral Springs, Florida',
       'why.eyebrow':'Why 2026','why.h':'Five signals lining up. One window.',
       'why.lede':'Category rights available in the 2026 window will not exist at this scale in two seasons&rsquo; time.',
@@ -789,7 +795,7 @@
       'hero.sub':'La federación argentina de hockey sobre hielo. Por primera vez en nuestra historia, abrimos las puertas a socios comerciales fundadores.',
       'hero.cta1':'Niveles de Patrocinio &rarr;','hero.cta2':'Leer la Historia',
       'sb.federation':'Federación','sb.silverware':'Último título','sb.silverwareV':'Campeones AMERIGOL Latam Cup',
-      'sb.programmes':'Programas nacionales','sb.programmesV':'Senior / Femenino / Juveniles',
+      'sb.programmes':'Programas nacionales','sb.programmesV':'Masculino / Femenino / Juniors',
       'sb.slots':'Cupos fundadores','sb.slotsV':'2 de 2 disponibles',
       'creds.champ':'Campeones AMERIGOL Latam Cup','creds.iihf':'Federación Miembro IIHF','creds.nhl':'Documental NHL','creds.progs':'3 Programas Nacionales',
       'stat.1.k':'01 / Alcance','stat.1.note':'Seguidores en Instagram y TikTok, con crecimiento semanal.',
@@ -801,9 +807,9 @@
       'story.p1':'De Maradona a Messi, Argentina escribió algunas de las historias más grandes del deporte mundial. Esa misma rebeldía se está volcando al hockey sobre hielo.',
       'story.p2':'La AAHHL no busca alcanzar a Canadá, ni a Finlandia, ni a la KHL. Buscamos ser Argentina, con hockey. Una propuesta fundamentalmente distinta y comercialmente más atractiva.',
       'prog.eyebrow':'Tres Programas','prog.h':'Una bandera. Tres equipos.',
-      'prog.1.k':'01 / Equipo Nacional','prog.1.n':'Masculino Senior','prog.1.d':'Campeones AMERIGOL Latam Cup.',
+      'prog.1.k':'01 / Equipo Nacional','prog.1.n':'Masculino','prog.1.d':'Campeones AMERIGOL Latam Cup.',
       'prog.2.k':'02 / Equipo Nacional','prog.2.n':'Femenino','prog.2.d':'3x3 Series Femenino, Buenos Aires.',
-      'prog.3.k':'03 / Desarrollo','prog.3.n':'Juveniles','prog.3.d':'La cantera de los programas senior y femenino.',
+      'prog.3.k':'03 / Desarrollo','prog.3.n':'Juniors','prog.3.d':'La cantera de los programas senior y femenino.',
       'ban1.k':'La audiencia','ban1.q':'Los hinchas argentinos viajan. Llenan el estadio.','ban1.a':'AMERIGOL Latam Cup, Coral Springs, Florida',
       'why.eyebrow':'Por qué 2026','why.h':'Cinco señales alineadas. Una ventana.',
       'why.lede':'Los derechos por categoría disponibles para la temporada 2026 no van a existir a esta escala en dos temporadas.',
