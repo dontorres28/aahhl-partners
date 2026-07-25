@@ -64,13 +64,13 @@
 
     /* HERO */
     .hero{position:relative;height:100vh;height:100svh;min-height:640px;color:#fff;overflow:hidden;isolation:isolate;background:var(--ink)}
-    .hero-bg{position:absolute;inset:0;z-index:-1}
-    .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
-    .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.1) 40%,rgba(0,0,0,.8) 100%)}
-    .hero-inner{position:relative;height:100%;padding:110px var(--pad) 0;display:flex;flex-direction:column;justify-content:flex-end}
-    .hero-h1{font-family:'Switzer',sans-serif;font-weight:800;font-size:clamp(40px,5.6vw,88px);line-height:1;letter-spacing:-.028em;color:#fff;max-width:18ch}
-    .hero-sub{max-width:520px;margin-top:28px;font-size:16px;line-height:1.6;color:rgba(255,255,255,.78);font-weight:400}
-    .hero-actions{margin-top:36px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    .hero-bg{position:absolute;inset:0;z-index:-1;will-change:transform}
+    .hero-bg img{width:100%;height:120%;object-fit:cover;object-position:center 25%;display:block;transform-origin:top center}
+    .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.52) 44%,rgba(0,0,0,.08) 100%),linear-gradient(to top,rgba(0,0,0,.88) 0%,rgba(0,0,0,.18) 40%,transparent 65%)}
+    .hero-inner{position:relative;height:100%;padding:0 var(--pad) 56px;display:flex;flex-direction:column;justify-content:flex-end}
+    .hero-h1{font-weight:800;font-size:clamp(52px,8.2vw,118px);line-height:.93;letter-spacing:-.04em;color:#fff;max-width:11ch}
+    .hero-sub{max-width:390px;margin-top:22px;font-size:15px;line-height:1.65;color:rgba(255,255,255,.6);font-weight:400}
+    .hero-actions{margin-top:30px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
     .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;font-family:'Switzer',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;transition:background .2s,color .2s,border-color .2s;border:1px solid transparent;border-radius:8px}
     .btn-primary{background:#fff;color:var(--ink)}
     .btn-primary:hover{background:var(--sky)}
@@ -80,16 +80,20 @@
     .btn-dark:hover{background:var(--sky);color:var(--ink)}
 
     /* HERO SCOREBOARD */
-    .scoreboard{margin-top:48px;padding:24px 0 28px;border-top:1px solid rgba(255,255,255,.2);display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
-    .sb-item{display:flex;flex-direction:column;gap:6px}
-    .sb-k{font-family:'Switzer',sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:500}
-    .sb-v{font-family:'Switzer',sans-serif;font-weight:700;font-size:18px;color:#fff;letter-spacing:-.005em;text-transform:uppercase}
+    .scoreboard{margin-top:60px;border-top:1px solid rgba(255,255,255,.13);display:grid;grid-template-columns:repeat(4,1fr)}
+    .sb-item{padding:20px 28px 8px 0;display:flex;flex-direction:column;gap:7px;border-right:1px solid rgba(255,255,255,.1)}
+    .sb-item:last-child{border-right:none}
+    .sb-k{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.38);font-weight:500}
+    .sb-v{font-size:13.5px;font-weight:600;color:rgba(255,255,255,.92);letter-spacing:-.01em;line-height:1.25}
 
-    /* CREDENTIAL STRIP — sits at top of white content */
-    .creds{background:var(--white);color:var(--mid);padding:18px var(--pad);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;font-family:'Switzer',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
-    .creds span{white-space:nowrap}
-    .creds .sep{opacity:.35}
-    .creds .champ{color:var(--ink);font-weight:600}
+    /* CREDENTIAL MARQUEE */
+    .creds{overflow:hidden;border-bottom:1px solid var(--line);background:var(--white);cursor:default}
+    .creds-track{display:inline-flex;white-space:nowrap;animation:marquee-scroll 36s linear infinite}
+    .creds:hover .creds-track{animation-play-state:paused}
+    .creds-item{display:inline-flex;align-items:center;white-space:nowrap;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;color:var(--dim);padding:13px 40px;border-right:1px solid var(--line)}
+    .creds-item.accent{color:var(--ink);font-weight:700}
+    .creds-dot{display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--sky);margin:0 0 1px}
+    @keyframes marquee-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
     /* Section shell */
     .section-pad{padding:clamp(72px,9vw,128px) var(--pad)}
@@ -347,13 +351,9 @@
   </div>
 </section>
 
-<!-- CREDENTIAL STRIP -->
-<div class="creds">
-  <span class="champ" data-i18n="creds.champ">AMERIGOL Latam Cup Champions</span><span class="sep">/</span>
-  <span data-i18n="creds.iihf">IIHF Member Federation</span><span class="sep">/</span>
-  <span data-i18n="creds.nhl">NHL Feature</span><span class="sep">/</span>
-  <span data-i18n="creds.progs">3 National Programmes</span><span class="sep">/</span>
-  <span>Buenos Aires</span>
+<!-- CREDENTIAL MARQUEE -->
+<div class="creds" aria-label="Federation credentials">
+  <div class="creds-track" aria-hidden="true"><span class="creds-item accent">AMERIGOL Latam Cup Champions</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">IIHF Member Federation</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">NHL Feature</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">3 National Programmes</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">Buenos Aires</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item accent">AMERIGOL Latam Cup Champions</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">IIHF Member Federation</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">NHL Feature</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">3 National Programmes</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">Buenos Aires</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item accent">AMERIGOL Latam Cup Champions</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">IIHF Member Federation</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">NHL Feature</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">3 National Programmes</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">Buenos Aires</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item accent">AMERIGOL Latam Cup Champions</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">IIHF Member Federation</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">NHL Feature</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">3 National Programmes</span><span class="creds-item"><span class="creds-dot"></span></span><span class="creds-item ">Buenos Aires</span><span class="creds-item"><span class="creds-dot"></span></span></div>
 </div>
 
 <!-- STATS -->
@@ -999,6 +999,25 @@
       success.scrollIntoView({behavior:'smooth', block:'center'});
     });
   });
+})();
+
+// ── Hero parallax ────────────────────────────────────────────
+(function(){
+  var bg = document.querySelector('.hero-bg img');
+  if(!bg) return;
+  var ticking = false;
+  function onScroll(){
+    if(!ticking){
+      requestAnimationFrame(function(){
+        var s = window.scrollY;
+        if(s < window.innerHeight * 1.4)
+          bg.style.transform = 'translateY(' + (s * 0.28) + 'px)';
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
 })();
 </script>
 </body>
