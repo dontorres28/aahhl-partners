@@ -1028,6 +1028,16 @@
     });
   });
 
+  function submitToWeb3Forms(fields, onSuccess, onError) {
+    var fd = new FormData();
+    fd.append('access_key', '0dcbfcf0-996d-4993-b3bd-e0d0c9414b43');
+    Object.keys(fields).forEach(function(k){ fd.append(k, fields[k]); });
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd })
+      .then(function(r){ return r.json(); })
+      .then(function(d){ if (d.success) onSuccess(); else onError(d.message); })
+      .catch(function(){ onError(); });
+  }
+
   // Modal form submit
   var modalForm = document.getElementById('modal-form');
   var modalSuccess = document.getElementById('modal-success');
@@ -1037,24 +1047,19 @@
     var lang = document.documentElement.getAttribute('data-lang') || 'en';
     modalSubmitBtn.disabled = true;
     modalSubmitBtn.innerHTML = i18n[lang]['form.sending'];
-    var body = {
-      firstName: document.getElementById('m-fn').value,
-      lastName: document.getElementById('m-ln').value,
+    submitToWeb3Forms({
+      name: document.getElementById('m-fn').value + ' ' + document.getElementById('m-ln').value,
       email: document.getElementById('m-em').value,
       company: document.getElementById('m-co').value,
       tier: document.getElementById('m-tier').value,
       message: document.getElementById('m-msg').value,
       _lang: lang
-    };
-    fetch('https://formspree.io/f/xpwzgzwd', {
-      method:'POST',
-      headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body: JSON.stringify(body)
-    })
-    .catch(function(){})
-    .finally(function(){
+    }, function(){
       modalForm.style.display = 'none';
       modalSuccess.style.display = 'block';
+    }, function(){
+      modalSubmitBtn.disabled = false;
+      modalSubmitBtn.innerHTML = i18n[lang]['form.send'];
     });
   });
 
@@ -1066,25 +1071,20 @@
     var lang = document.documentElement.getAttribute('data-lang') || 'en';
     submitBtn.disabled = true;
     submitBtn.innerHTML = i18n[lang]['form.sending'];
-    var body = {
-      firstName: document.getElementById('fn').value,
-      lastName: document.getElementById('ln').value,
+    submitToWeb3Forms({
+      name: document.getElementById('fn').value + ' ' + document.getElementById('ln').value,
       email: document.getElementById('em').value,
       company: document.getElementById('co').value,
       tier: document.getElementById('tier').value,
       message: document.getElementById('msg').value,
       _lang: lang
-    };
-    fetch('https://formspree.io/f/xpwzgzwd', {
-      method:'POST',
-      headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body: JSON.stringify(body)
-    })
-    .catch(function(){})
-    .finally(function(){
+    }, function(){
       form.style.display = 'none';
       success.style.display = 'block';
       success.scrollIntoView({behavior:'smooth', block:'center'});
+    }, function(){
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = i18n[lang]['form.send'];
     });
   });
 })();
