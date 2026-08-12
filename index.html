@@ -232,6 +232,7 @@
     .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .form-group{display:flex;flex-direction:column;gap:8px}
     .form-label{font-family:'Switzer',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+    .form-label .req{color:#c0392b;margin-left:3px;font-size:11px}
     .form-input,.form-textarea,.form-select{background:var(--white);border:1px solid var(--line);color:var(--text);font-family:'Switzer',sans-serif;font-size:15px;padding:13px 15px;outline:none;transition:border-color .15s;width:100%;border-radius:8px}
     .form-input:focus,.form-textarea:focus,.form-select:focus{border-color:var(--ink)}
     .form-textarea{min-height:130px;resize:vertical}
@@ -356,7 +357,7 @@
 
 <nav id="nav">
   <a href="/" class="nav-brand" aria-label="AAHHL home">
-    <span class="nav-word">AAHHL</span>
+    <img src="images/logo.png" alt="AAHHL" class="nav-logo-img" style="height:36px">
   </a>
   <div class="nav-right">
     <div class="nav-links">
@@ -670,12 +671,12 @@
     <div>
       <form class="contact-form" id="contact-form">
         <div class="form-row">
-          <div class="form-group"><label class="form-label" for="fn" data-i18n="form.fn">First Name</label><input class="form-input" id="fn" type="text" autocomplete="given-name" required></div>
-          <div class="form-group"><label class="form-label" for="ln" data-i18n="form.ln">Last Name</label><input class="form-input" id="ln" type="text" autocomplete="family-name" required></div>
+          <div class="form-group"><label class="form-label" for="fn" data-i18n="form.fn">First Name<span class="req">*</span></label><input class="form-input" id="fn" type="text" autocomplete="given-name" required></div>
+          <div class="form-group"><label class="form-label" for="ln" data-i18n="form.ln">Last Name<span class="req">*</span></label><input class="form-input" id="ln" type="text" autocomplete="family-name" required></div>
         </div>
         <div class="form-row">
-          <div class="form-group"><label class="form-label" for="em" data-i18n="form.em">Email</label><input class="form-input" id="em" type="email" autocomplete="email" required></div>
-          <div class="form-group"><label class="form-label" for="co" data-i18n="form.co">Company</label><input class="form-input" id="co" type="text" autocomplete="organization"></div>
+          <div class="form-group"><label class="form-label" for="em" data-i18n="form.em">Email<span class="req">*</span></label><input class="form-input" id="em" type="email" autocomplete="email" required></div>
+          <div class="form-group"><label class="form-label" for="co" data-i18n="form.co">Company<span class="req">*</span></label><input class="form-input" id="co" type="text" autocomplete="organization" required></div>
         </div>
         <div class="form-group">
           <label class="form-label" for="tier" data-i18n="form.tier">Partnership Tier</label>
@@ -701,12 +702,12 @@
     <p class="modal-sub" data-i18n="contact.lede">Every message goes to the three names above. Response within 48 hours.</p>
     <form class="contact-form" id="modal-form">
       <div class="form-row">
-        <div class="form-group"><label class="form-label" for="m-fn" data-i18n="form.fn">First Name</label><input class="form-input" id="m-fn" type="text" autocomplete="given-name" required></div>
-        <div class="form-group"><label class="form-label" for="m-ln" data-i18n="form.ln">Last Name</label><input class="form-input" id="m-ln" type="text" autocomplete="family-name" required></div>
+        <div class="form-group"><label class="form-label" for="m-fn" data-i18n="form.fn">First Name<span class="req">*</span></label><input class="form-input" id="m-fn" type="text" autocomplete="given-name" required></div>
+        <div class="form-group"><label class="form-label" for="m-ln" data-i18n="form.ln">Last Name<span class="req">*</span></label><input class="form-input" id="m-ln" type="text" autocomplete="family-name" required></div>
       </div>
       <div class="form-row">
-        <div class="form-group"><label class="form-label" for="m-em" data-i18n="form.em">Email</label><input class="form-input" id="m-em" type="email" autocomplete="email" required></div>
-        <div class="form-group"><label class="form-label" for="m-co" data-i18n="form.co">Company</label><input class="form-input" id="m-co" type="text" autocomplete="organization"></div>
+        <div class="form-group"><label class="form-label" for="m-em" data-i18n="form.em">Email<span class="req">*</span></label><input class="form-input" id="m-em" type="email" autocomplete="email" required></div>
+        <div class="form-group"><label class="form-label" for="m-co" data-i18n="form.co">Company<span class="req">*</span></label><input class="form-input" id="m-co" type="text" autocomplete="organization" required></div>
       </div>
       <div class="form-group">
         <label class="form-label" for="m-tier" data-i18n="form.tier">Partnership Tier</label>
@@ -726,7 +727,7 @@
 <footer>
   <div class="foot-top">
     <div class="foot-brand">
-      <div class="foot-word">AAHHL</div>
+      <img src="images/logo.png" alt="AAHHL" style="height:48px;width:auto;opacity:.75;filter:brightness(0) invert(1);margin-bottom:4px">
       <p class="foot-tag" data-i18n="foot.tag">Asociaci&oacute;n Argentina de Hockey sobre Hielo. IIHF member federation since 1997. AMERIGOL Latam Cup Champions.</p>
     </div>
     <div class="foot-col">
